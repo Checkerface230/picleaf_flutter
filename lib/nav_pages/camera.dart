@@ -4,7 +4,6 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class cameraPage extends StatefulWidget {
   const cameraPage({super.key});
-
   @override
   State<cameraPage> createState() => _cameraPageState();
 }
