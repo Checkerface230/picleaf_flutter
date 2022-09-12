@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Picleaf', home: mainPage());
+    return MaterialApp(
+        debugShowCheckedModeBanner: false, title: 'Picleaf', home: mainPage());
   }
 }
