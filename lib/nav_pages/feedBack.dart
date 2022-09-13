@@ -34,28 +34,37 @@ class _feedbackPageState extends State<feedbackPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Text(
+              const Text(" ",
+              ),
+               const Text(
                 "FEEDBACK",
                 style: TextStyle(
                   fontSize: 32.0,
+                  fontFamily: 'RobotoBold',
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text("Give us your feedback!"),
+               const Text(
+                "Give us your feedback!",
+                style: TextStyle(
+                  fontSize: 16.0,
+                  fontFamily: 'RobotoBold',
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 32.0),
                 child: Column(
                   children: <Widget>[
-                    SizedBox(height: 16.0),
-                    TextField(
+                     const SizedBox(height: 16.0),
+                     const TextField(
                       decoration: InputDecoration(
                           filled: true,
                           fillColor: Colors.white,
                           hintText: "Name",
                           border: InputBorder.none),
                     ),
-                    SizedBox(height: 8.0),
-                    TextField(
+                     const SizedBox(height: 8.0),
+                     const TextField(
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
@@ -63,8 +72,8 @@ class _feedbackPageState extends State<feedbackPage> {
                         border: InputBorder.none,
                       ),
                     ),
-                    SizedBox(height: 8.0),
-                    TextField(
+                     const SizedBox(height: 8.0),
+                     const TextField(
                       maxLines: 7,
                       decoration: InputDecoration(
                         filled: true,
@@ -73,17 +82,20 @@ class _feedbackPageState extends State<feedbackPage> {
                         border: InputBorder.none,
                       ),
                     ),
-                    SizedBox(height: 8.0),
+                     const SizedBox(height: 8.0),
                     MaterialButton(
                       height: 60.0,
                       minWidth: double.infinity,
                       color: Color.fromRGBO(102, 204, 102, 100),
                       onPressed: () {},
-                      child: Text("SUBMIT",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          )),
+                      child: const Text(
+                        "SUBMIT",
+                        style: TextStyle(
+                          fontFamily: 'RobotoBold',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
                     )
                   ],
                 ),
