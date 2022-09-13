@@ -41,28 +41,28 @@ class _mainPageState extends State<mainPage> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: Colors.green,
+              color: Color.fromARGB(255, 75, 175, 78),
             ),
             label: 'Home',
           ), //Home
           BottomNavigationBarItem(
             icon: Icon(
               Icons.camera_alt,
-              color: Colors.green,
+              color: Color.fromARGB(255, 75, 175, 78),
             ),
             label: 'Camera',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
-              color: Colors.green,
+              color: Color.fromARGB(255, 75, 175, 78),
             ),
             label: 'About Us',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.feedback,
-              color: Colors.green,
+              color: Color.fromARGB(255, 75, 175, 78),
             ),
             label: 'Feeback',
           ),
