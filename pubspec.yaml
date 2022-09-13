@@ -58,19 +58,19 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter_icons:
   #  image_path: "assets/images/icon-128x128.png"
-  image_path_android: "assets/Launcher_icon.png"
-  image_path_ios: "assets/Launcher_icon.png"
+  image_path_android: "assets/images/Launcher_icon.png"
+  image_path_ios: "assets/images/Launcher_icon.png"
   android: true 
   ios: true
   min_sdk_android: 21
   web:
     generate: true
-    image_path: "assets/Launcher_icon.png"
+    image_path: "assets/images/Launcher_icon.png"
     background_color: "#hexcode"
     theme_color: "#hexcode"
   windows:
     generate: true
-    image_path: "assets/Launcher_icon.png"
+    image_path: "assets/images/Launcher_icon.png"
     icon_size: 48 # min:48, max:256, default: 48
 
 flutter:
@@ -85,6 +85,7 @@ flutter:
   - assets/images/JC_pic.png
   - assets/images/Fritz_pic.png
   - assets/images/Russel_pic.png
+  - assets/images/Launcher_icon.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
