@@ -39,19 +39,31 @@ class _mainPageState extends State<mainPage> {
         showUnselectedLabels: true,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              color: Color.fromARGB(255, 75, 175, 78),
+            ),
             label: 'Home',
           ), //Home
           BottomNavigationBarItem(
-            icon: Icon(Icons.camera_alt),
+            icon: Icon(
+              Icons.camera_alt,
+              color: Color.fromARGB(255, 75, 175, 78),
+            ),
             label: 'Camera',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(
+              Icons.person,
+              color: Color.fromARGB(255, 75, 175, 78),
+            ),
             label: 'About Us',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.feedback),
+            icon: Icon(
+              Icons.feedback,
+              color: Color.fromARGB(255, 75, 175, 78),
+            ),
             label: 'Feeback',
           ),
         ],
