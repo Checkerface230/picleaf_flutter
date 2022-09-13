@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:picleaf/nav_pages/home.dart';
 import 'package:picleaf/nav_pages/mainPage.dart';
 
 void main() {
