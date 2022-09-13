@@ -64,7 +64,7 @@ class aboutusPage extends StatelessWidget {
                     textAlign: TextAlign.center),
               ),
               const SizedBox(
-                height: 30,
+                height: 25,
               ),
               CircleAvatar(
                 backgroundImage: AssetImage('assets/images/Fritz_pic.png'),
