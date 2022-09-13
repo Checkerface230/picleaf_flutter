@@ -16,7 +16,15 @@ class _cameraPageState extends State<cameraPage> {
     return Scaffold(
       // AppBar para sa taas na design
       appBar: AppBar(
-        title: Text("Picleaf"),
+        centerTitle: true,
+        title: Text(
+          "Picleaf",
+          style: TextStyle(
+              color: Color.fromRGBO(102, 204, 102, 100),
+              fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Colors.white,
+        shadowColor: Color.fromARGB(255, 95, 94, 94),
       ),
       // eto yung text
       body: Center(

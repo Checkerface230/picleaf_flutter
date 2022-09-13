@@ -10,7 +10,15 @@ class aboutusPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Picleaf"),
+        centerTitle: true,
+        title: Text(
+          "Picleaf",
+          style: TextStyle(
+              color: Color.fromRGBO(102, 204, 102, 100),
+              fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Colors.white,
+        shadowColor: Color.fromARGB(255, 95, 94, 94),
       ),
       body: Center(
         child: Text("About Us"),
