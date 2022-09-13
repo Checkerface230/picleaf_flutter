@@ -1,30 +1,27 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-class aboutusPage extends StatelessWidget {
-  const aboutusPage({super.key});
+class AboutUsPage extends StatelessWidget {
+  const AboutUsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text(
+          title: const Text(
             "Picleaf",
             style: TextStyle(
                 color: Color.fromRGBO(102, 204, 102, 100),
                 fontWeight: FontWeight.bold),
           ),
           backgroundColor: Colors.white,
-          shadowColor: Color.fromARGB(255, 95, 94, 94),
+          shadowColor: const Color.fromARGB(255, 95, 94, 94),
         ),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
@@ -47,7 +44,7 @@ class aboutusPage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 18,
                       fontFamily: 'RobotoBold',
-                      color: Color.fromRGBO(0, 0, 0, 100)),
+                      color: Colors.black),
                   textAlign: TextAlign.justify,
                 ),
               ),
@@ -66,9 +63,13 @@ class aboutusPage extends StatelessWidget {
               const SizedBox(
                 height: 25,
               ),
-              CircleAvatar(
-                backgroundImage: AssetImage('assets/images/Fritz_pic.png'),
-                radius: 100,
+              const CircleAvatar(
+                backgroundColor: Color.fromRGBO(102, 204, 102, 100),
+                radius: 120,
+                child: CircleAvatar(
+                  radius: 110,
+                  backgroundImage: AssetImage('assets/images/Fritz_pic.png'),
+                ),
               ),
               const SizedBox(
                 height: 10,
@@ -80,16 +81,20 @@ class aboutusPage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 18,
                       fontFamily: 'RobotoBold',
-                      color: Color.fromRGBO(0, 0, 0, 100)),
+                      color: Colors.black),
                   textAlign: TextAlign.justify,
                 ),
               ),
               const SizedBox(
                 height: 30,
               ),
-              CircleAvatar(
-                backgroundImage: AssetImage('assets/images/JC_pic.png'),
-                radius: 100,
+              const CircleAvatar(
+                backgroundColor: Color.fromRGBO(102, 204, 102, 100),
+                radius: 120,
+                child: CircleAvatar(
+                  radius: 110,
+                  backgroundImage: AssetImage('assets/images/JC_pic.png'),
+                ),
               ),
               const SizedBox(
                 height: 10,
@@ -101,16 +106,20 @@ class aboutusPage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 18,
                       fontFamily: 'RobotoBold',
-                      color: Color.fromRGBO(0, 0, 0, 100)),
+                      color: Colors.black),
                   textAlign: TextAlign.justify,
                 ),
               ),
               const SizedBox(
                 height: 30,
               ),
-              CircleAvatar(
-                backgroundImage: AssetImage('assets/images/Russel_pic.png'),
-                radius: 100,
+              const CircleAvatar(
+                backgroundColor: Color.fromRGBO(102, 204, 102, 100),
+                radius: 120,
+                child: CircleAvatar(
+                  radius: 110,
+                  backgroundImage: AssetImage('assets/images/Russel_pic.png'),
+                ),
               ),
               const SizedBox(
                 height: 10,
@@ -122,7 +131,7 @@ class aboutusPage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 18,
                       fontFamily: 'RobotoBold',
-                      color: Color.fromRGBO(0, 0, 0, 100)),
+                      color: Colors.black),
                   textAlign: TextAlign.justify,
                 ),
               ),

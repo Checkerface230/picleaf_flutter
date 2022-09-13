@@ -17,7 +17,7 @@ class _mainPageState extends State<mainPage> {
   List pages = [
     const homePage(),
     const cameraPage(),
-    const aboutusPage(),
+    const AboutUsPage(),
     const feedbackPage()
   ];
   int currentIndex = 0;
