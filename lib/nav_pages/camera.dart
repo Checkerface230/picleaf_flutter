@@ -13,8 +13,13 @@ class cameraPage extends StatefulWidget {
 class _cameraPageState extends State<cameraPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Center(
+    return Scaffold(
+      // AppBar para sa taas na design
+      appBar: AppBar(
+        title: Text("Picleaf"),
+      ),
+      // eto yung text
+      body: Center(
         child: Text("Camera"),
       ),
     );
