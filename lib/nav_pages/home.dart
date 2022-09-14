@@ -35,7 +35,7 @@ class CustomSearchDelegate extends SearchDelegate {
         onPressed: () {
           query = '';
         },
-        icon: Icon(Icons.clear),
+        icon: const Icon(Icons.clear),
       ),
     ];
   }
@@ -47,7 +47,7 @@ class CustomSearchDelegate extends SearchDelegate {
       onPressed: () {
         close(context, null);
       },
-      icon: Icon(Icons.arrow_back),
+      icon: const Icon(Icons.arrow_back),
     );
   }
 
@@ -152,6 +152,7 @@ class _HomePageState extends State<homePage> {
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
+                margin: const EdgeInsets.symmetric(horizontal: 20.0),
                 color: const Color.fromRGBO(102, 204, 102, 100),
                 child: const Text('List of Plants',
                     style: TextStyle(
@@ -160,6 +161,45 @@ class _HomePageState extends State<homePage> {
                         color: Colors.black),
                     textAlign: TextAlign.center),
               ),
+              GridView.count(
+                primary: false,
+                padding: const EdgeInsets.all(20),
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                crossAxisCount: 2,
+                children: <Widget>[
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    color: Colors.teal[100],
+                    child: const Text("He'd have you all unravel at the"),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    color: Colors.teal[200],
+                    child: const Text('Heed not the rabble'),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    color: Colors.teal[300],
+                    child: const Text('Sound of screams but the'),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    color: Colors.teal[400],
+                    child: const Text('Who scream'),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    color: Colors.teal[500],
+                    child: const Text('Revolution is coming...'),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    color: Colors.teal[600],
+                    child: const Text('Revolution, they...'),
+                  ),
+                ],
+              )
             ],
           ),
         ));
