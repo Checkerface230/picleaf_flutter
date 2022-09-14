@@ -15,6 +15,7 @@ class _feedbackPageState extends State<feedbackPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         // AppBar para sa taas ng design
         appBar: AppBar(
           centerTitle: true,
@@ -34,9 +35,10 @@ class _feedbackPageState extends State<feedbackPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              const Text(" ",
+              const Text(
+                " ",
               ),
-               const Text(
+              const Text(
                 "FEEDBACK",
                 style: TextStyle(
                   fontSize: 32.0,
@@ -44,7 +46,7 @@ class _feedbackPageState extends State<feedbackPage> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-               const Text(
+              const Text(
                 "Give us your feedback!",
                 style: TextStyle(
                   fontSize: 16.0,
@@ -55,16 +57,16 @@ class _feedbackPageState extends State<feedbackPage> {
                 padding: const EdgeInsets.symmetric(horizontal: 32.0),
                 child: Column(
                   children: <Widget>[
-                     const SizedBox(height: 16.0),
-                     const TextField(
+                    const SizedBox(height: 16.0),
+                    const TextField(
                       decoration: InputDecoration(
                           filled: true,
                           fillColor: Colors.white,
                           hintText: "Name",
                           border: InputBorder.none),
                     ),
-                     const SizedBox(height: 8.0),
-                     const TextField(
+                    const SizedBox(height: 8.0),
+                    const TextField(
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
@@ -72,8 +74,8 @@ class _feedbackPageState extends State<feedbackPage> {
                         border: InputBorder.none,
                       ),
                     ),
-                     const SizedBox(height: 8.0),
-                     const TextField(
+                    const SizedBox(height: 8.0),
+                    const TextField(
                       maxLines: 7,
                       decoration: InputDecoration(
                         filled: true,
@@ -82,7 +84,7 @@ class _feedbackPageState extends State<feedbackPage> {
                         border: InputBorder.none,
                       ),
                     ),
-                     const SizedBox(height: 8.0),
+                    const SizedBox(height: 8.0),
                     MaterialButton(
                       height: 60.0,
                       minWidth: double.infinity,
