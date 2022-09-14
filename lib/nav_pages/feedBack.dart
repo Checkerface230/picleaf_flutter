@@ -15,7 +15,6 @@ class _feedbackPageState extends State<feedbackPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset: false,
         // AppBar para sa taas ng design
         appBar: AppBar(
           centerTitle: true,
