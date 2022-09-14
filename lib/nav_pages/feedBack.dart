@@ -1,16 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class feedbackPage extends StatefulWidget {
   const feedbackPage({super.key});
 
   @override
-  State<feedbackPage> createState() => _feedbackPageState();
+  State<feedbackPage> createState() => _FeedbackPageState();
 }
 
-class _feedbackPageState extends State<feedbackPage> {
+class _FeedbackPageState extends State<feedbackPage> {
   List<bool> isTypeSelected = [false, false, false, true, true];
   @override
   Widget build(BuildContext context) {
@@ -18,19 +15,19 @@ class _feedbackPageState extends State<feedbackPage> {
         // AppBar para sa taas ng design
         appBar: AppBar(
           centerTitle: true,
-          title: Text(
+          title: const Text(
             "Picleaf",
             style: TextStyle(
                 color: Color.fromRGBO(102, 204, 102, 100),
                 fontWeight: FontWeight.bold),
           ),
           backgroundColor: Colors.white,
-          shadowColor: Color.fromARGB(255, 95, 94, 94),
+          shadowColor: const Color.fromARGB(255, 95, 94, 94),
         ),
 
         //body of the application
-        backgroundColor: Color(0xffeeeeee),
-        body: Center(
+        backgroundColor: const Color(0xffeeeeee),
+        body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
@@ -87,7 +84,7 @@ class _feedbackPageState extends State<feedbackPage> {
                     MaterialButton(
                       height: 60.0,
                       minWidth: double.infinity,
-                      color: Color.fromRGBO(102, 204, 102, 100),
+                      color: const Color.fromRGBO(102, 204, 102, 100),
                       onPressed: () {},
                       child: const Text(
                         "SUBMIT",
