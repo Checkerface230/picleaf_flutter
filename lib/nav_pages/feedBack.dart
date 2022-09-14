@@ -30,7 +30,7 @@ class _feedbackPageState extends State<feedbackPage> {
 
         //body of the application
         backgroundColor: Color(0xffeeeeee),
-        body: Center(
+        body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
