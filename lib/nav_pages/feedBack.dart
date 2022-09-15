@@ -94,6 +94,48 @@ class _FeedbackPageState extends State<feedbackPage> {
                           color: Colors.white,
                         ),
                       ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
+                      child: const Text(
+                        'Contact Us!',
+                        style: TextStyle(
+                            fontSize: 30,
+                            fontFamily: 'RobotoBold',
+                            color: Color.fromRGBO(102, 204, 102, 100)),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        TextButton.icon(
+                          // <-- TextButton
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.facebook,
+                            color: Colors.black,
+                            size: 35.0,
+                          ),
+                          label: Text('facebook.com/picleaf'),
+                          style: TextButton.styleFrom(
+                            primary: Colors.black,
+                          ),
+                        ),
+                        TextButton.icon(
+                          // <-- TextButton
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.email,
+                            color: Colors.black,
+                            size: 35.0,
+                          ),
+
+                          label: Text('picleaf@gmail.com'),
+                          style: TextButton.styleFrom(
+                            primary: Colors.black,
+                          ),
+                        )
+                      ],
                     )
                   ],
                 ),
