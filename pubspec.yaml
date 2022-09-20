@@ -103,6 +103,9 @@ flutter:
     - family: RobotoBold
       fonts:
         - asset: assets\fonts\Roboto-Bold.ttf
+    - family: RobotoMedium
+      fonts:
+        - asset: assets\fonts\Roboto-Medium.ttf   
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
