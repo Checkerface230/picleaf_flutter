@@ -37,7 +37,7 @@ dependencies:
   image_picker: ^0.8.5+3
   tfx: ^0.0.1
   flutter_native_splash: ^2.2.9
-  #tflite: ^1.1.2
+  tflite: ^1.1.2
 
 flutter_native_splash:
   color: "#ffffff"
