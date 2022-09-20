@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:picleaf/nav_pages/aboutUs.dart';
 import 'package:picleaf/nav_pages/camera.dart';
 import 'package:picleaf/nav_pages/feedBack.dart';
@@ -18,7 +16,7 @@ class _mainPageState extends State<mainPage> {
     const homePage(),
     const cameraPage(),
     const AboutUsPage(),
-    const feedbackPage()
+    const FeedbackPage()
   ];
   int currentIndex = 0;
   void onTap(int index) {
@@ -34,7 +32,7 @@ class _mainPageState extends State<mainPage> {
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTap,
         currentIndex: currentIndex,
-        selectedItemColor: Color.fromARGB(255, 75, 175, 78),
+        selectedItemColor: const Color.fromARGB(255, 75, 175, 78),
         unselectedItemColor: Colors.grey.withOpacity(0.5),
         showUnselectedLabels: true,
         items: const [
@@ -60,7 +58,7 @@ class _mainPageState extends State<mainPage> {
             icon: Icon(
               Icons.feedback,
             ),
-            label: 'Feeback',
+            label: 'Feedback',
           ),
         ],
       ),

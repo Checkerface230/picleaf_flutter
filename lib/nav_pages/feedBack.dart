@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class feedbackPage extends StatefulWidget {
-  const feedbackPage({super.key});
+class FeedbackPage extends StatefulWidget {
+  const FeedbackPage({super.key});
 
   @override
-  State<feedbackPage> createState() => _FeedbackPageState();
+  State<FeedbackPage> createState() => _FeedbackPageState();
 }
 
-class _FeedbackPageState extends State<feedbackPage> {
+class _FeedbackPageState extends State<FeedbackPage> {
   List<bool> isTypeSelected = [false, false, false, true, true];
   @override
   Widget build(BuildContext context) {
