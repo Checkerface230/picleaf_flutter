@@ -193,7 +193,7 @@ class _HomePageState extends State<homePage> {
                     children: <Widget>[
                       Container(
                         padding: const EdgeInsets.all(8),
-                        color: const Color.fromRGBO(17, 102, 19, 1.0),
+                        color: const Color.fromARGB(255, 75, 175, 78),
                         child: const Text(
                           "Apple",
                           style: TextStyle(
@@ -204,7 +204,7 @@ class _HomePageState extends State<homePage> {
                       ),
                       Container(
                         padding: const EdgeInsets.all(8),
-                        color: const Color.fromRGBO(17, 102, 19, 1.0),
+                        color: const Color.fromARGB(255, 75, 175, 78),
                         child: const Text(
                           "Blueberry",
                           style: TextStyle(
@@ -215,7 +215,7 @@ class _HomePageState extends State<homePage> {
                       ),
                       Container(
                         padding: const EdgeInsets.all(8),
-                        color: const Color.fromRGBO(17, 102, 19, 1.0),
+                        color: const Color.fromARGB(255, 75, 175, 78),
                         child: const Text(
                           "Cherry",
                           style: TextStyle(
@@ -226,7 +226,7 @@ class _HomePageState extends State<homePage> {
                       ),
                       Container(
                         padding: const EdgeInsets.all(8),
-                        color: const Color.fromRGBO(17, 102, 19, 1.0),
+                        color: const Color.fromARGB(255, 75, 175, 78),
                         child: const Text(
                           "Corn",
                           style: TextStyle(
@@ -237,7 +237,7 @@ class _HomePageState extends State<homePage> {
                       ),
                       Container(
                         padding: const EdgeInsets.all(8),
-                        color: const Color.fromRGBO(17, 102, 19, 1.0),
+                        color: const Color.fromARGB(255, 75, 175, 78),
                         child: const Text(
                           "Grape",
                           style: TextStyle(
@@ -248,7 +248,7 @@ class _HomePageState extends State<homePage> {
                       ),
                       Container(
                         padding: const EdgeInsets.all(8),
-                        color: const Color.fromRGBO(17, 102, 19, 1.0),
+                        color: const Color.fromARGB(255, 75, 175, 78),
                         child: const Text(
                           "Orange",
                           style: TextStyle(
