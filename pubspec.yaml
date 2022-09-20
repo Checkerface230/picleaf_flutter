@@ -36,8 +36,14 @@ dependencies:
   cupertino_icons: ^1.0.2
   image_picker: ^0.8.5+3
   tfx: ^0.0.1
+  flutter_native_splash: ^2.2.9
   #tflite: ^1.1.2
 
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/logo.png
+  web: true
+  
 
 dev_dependencies:
   flutter_test:
