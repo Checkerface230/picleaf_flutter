@@ -83,14 +83,14 @@ class _CameraPageState extends State<cameraPage> {
         title: const Text(
           "Picleaf",
           style: TextStyle(
-              color: Color.fromRGBO(102, 204, 102, 100),
+              color: Color.fromRGBO(102, 204, 102, 1.0),
               fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.white,
         shadowColor: const Color.fromARGB(255, 95, 94, 94),
       ),
       backgroundColor: const Color(0xffeeeeee),
-      body: SizedBox(
+      body: SingleChildScrollView(
           child: Column(
         children: <Widget>[
           const SizedBox(
@@ -106,7 +106,7 @@ class _CameraPageState extends State<cameraPage> {
                       ]),
                     )
                   : const Text(
-                      'Eto yung ilalabas na output kapag na detect yung image') /*SizedBox(
+                      'Yung mga susunod sana dito yung ilalabas na output kapag na detect yung image') /*SizedBox(
                     child: Column(children: <Widget>[
                       SizedBox(
                         height: 250,

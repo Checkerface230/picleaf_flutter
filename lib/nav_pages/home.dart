@@ -110,7 +110,7 @@ class _HomePageState extends State<homePage> {
         title: const Text(
           "Picleaf",
           style: TextStyle(
-              color: Color.fromRGBO(102, 204, 102, 100),
+              color: Color.fromRGBO(102, 204, 102, 1.0),
               fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.white,
@@ -153,114 +153,115 @@ class _HomePageState extends State<homePage> {
                   style: TextStyle(
                       fontSize: 18,
                       fontFamily: 'RobotoMedium',
-                      color: Colors.black),
+                      color: Color.fromRGBO(102, 124, 138, 1.0)),
                   textAlign: TextAlign.left),
             ),
             const SizedBox(
               height: 10,
             ),
-            Column(
-              children: <Widget>[
-                Container(
-                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
-                  margin: const EdgeInsets.symmetric(horizontal: 0),
-                  color: const Color.fromRGBO(102, 204, 102, 100),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const <Widget>[
-                      Expanded(
-                        child: Text('List of Plants',
+            Container(
+              color: const Color.fromRGBO(102, 204, 102, 1.0),
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+                    margin: const EdgeInsets.symmetric(horizontal: 0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: const <Widget>[
+                        Expanded(
+                          child: Text('List of Plants',
+                              style: TextStyle(
+                                  fontSize: 30,
+                                  fontFamily: 'RobotoBold',
+                                  color: Color(0xffeeeeee)),
+                              textAlign: TextAlign.center),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    margin: const EdgeInsets.symmetric(horizontal: 0),
+                    child: GridView.count(
+                      physics: const ScrollPhysics(),
+                      shrinkWrap: true,
+                      padding: const EdgeInsets.all(20),
+                      crossAxisSpacing: 18,
+                      mainAxisSpacing: 18,
+                      crossAxisCount: 2,
+                      children: <Widget>[
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          color: const Color.fromARGB(255, 75, 175, 78),
+                          child: const Text(
+                            "Apple",
                             style: TextStyle(
-                                fontSize: 30,
-                                fontFamily: 'RobotoBold',
+                                fontSize: 20,
+                                fontFamily: 'RobotoMedium',
                                 color: Color(0xffeeeeee)),
-                            textAlign: TextAlign.center),
-                      ),
-                    ],
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          color: const Color.fromARGB(255, 75, 175, 78),
+                          child: const Text(
+                            "Blueberry",
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: 'RobotoMedium',
+                                color: Color(0xffeeeeee)),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          color: const Color.fromARGB(255, 75, 175, 78),
+                          child: const Text(
+                            "Cherry",
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: 'RobotoMedium',
+                                color: Color(0xffeeeeee)),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          color: const Color.fromARGB(255, 75, 175, 78),
+                          child: const Text(
+                            "Corn",
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: 'RobotoMedium',
+                                color: Color(0xffeeeeee)),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          color: const Color.fromARGB(255, 75, 175, 78),
+                          child: const Text(
+                            "Grape",
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: 'RobotoMedium',
+                                color: Color(0xffeeeeee)),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          color: const Color.fromARGB(255, 75, 175, 78),
+                          child: const Text(
+                            "Orange",
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: 'RobotoMedium',
+                                color: Color(0xffeeeeee)),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                Container(
-                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
-                  margin: const EdgeInsets.symmetric(horizontal: 0),
-                  color: const Color.fromRGBO(102, 204, 102, 100),
-                  child: GridView.count(
-                    physics: const ScrollPhysics(),
-                    shrinkWrap: true,
-                    padding: const EdgeInsets.all(20),
-                    crossAxisSpacing: 18,
-                    mainAxisSpacing: 18,
-                    crossAxisCount: 2,
-                    children: <Widget>[
-                      Container(
-                        padding: const EdgeInsets.all(8),
-                        color: const Color.fromARGB(255, 75, 175, 78),
-                        child: const Text(
-                          "Apple",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: 'RobotoMedium',
-                              color: Color(0xffeeeeee)),
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(8),
-                        color: const Color.fromARGB(255, 75, 175, 78),
-                        child: const Text(
-                          "Blueberry",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: 'RobotoMedium',
-                              color: Color(0xffeeeeee)),
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(8),
-                        color: const Color.fromARGB(255, 75, 175, 78),
-                        child: const Text(
-                          "Cherry",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: 'RobotoMedium',
-                              color: Color(0xffeeeeee)),
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(8),
-                        color: const Color.fromARGB(255, 75, 175, 78),
-                        child: const Text(
-                          "Corn",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: 'RobotoMedium',
-                              color: Color(0xffeeeeee)),
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(8),
-                        color: const Color.fromARGB(255, 75, 175, 78),
-                        child: const Text(
-                          "Grape",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: 'RobotoMedium',
-                              color: Color(0xffeeeeee)),
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(8),
-                        color: const Color.fromARGB(255, 75, 175, 78),
-                        child: const Text(
-                          "Orange",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: 'RobotoMedium',
-                              color: Color(0xffeeeeee)),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
