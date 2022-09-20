@@ -11,7 +11,7 @@ class AboutUsPage extends StatelessWidget {
         title: const Text(
           "Picleaf",
           style: TextStyle(
-              color: Color.fromRGBO(102, 204, 102, 100),
+              color: Color.fromRGBO(102, 204, 102, 1.0),
               fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.white,
@@ -31,7 +31,7 @@ class AboutUsPage extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 30,
                     fontFamily: 'RobotoBold',
-                    color: Color.fromRGBO(102, 204, 102, 100)),
+                    color: Color.fromRGBO(102, 204, 102, 1.0)),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -58,7 +58,7 @@ class AboutUsPage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 30,
                       fontFamily: 'RobotoBold',
-                      color: Color.fromRGBO(102, 204, 102, 100)),
+                      color: Color.fromRGBO(102, 204, 102, 1.0)),
                   textAlign: TextAlign.center),
             ),
             Container(
@@ -69,7 +69,7 @@ class AboutUsPage extends StatelessWidget {
                   Column(
                     children: <Widget>[
                       const CircleAvatar(
-                        backgroundColor: Color.fromRGBO(102, 204, 102, 100),
+                        backgroundColor: Color.fromRGBO(102, 204, 102, 1.0),
                         radius: 60,
                         child: CircleAvatar(
                           radius: 55,
@@ -93,7 +93,7 @@ class AboutUsPage extends StatelessWidget {
                   Column(
                     children: <Widget>[
                       const CircleAvatar(
-                        backgroundColor: Color.fromRGBO(102, 204, 102, 100),
+                        backgroundColor: Color.fromRGBO(102, 204, 102, 1.0),
                         radius: 60,
                         child: CircleAvatar(
                           radius: 55,
@@ -120,7 +120,7 @@ class AboutUsPage extends StatelessWidget {
             Column(
               children: <Widget>[
                 const CircleAvatar(
-                  backgroundColor: Color.fromRGBO(102, 204, 102, 100),
+                  backgroundColor: Color.fromRGBO(102, 204, 102, 1.0),
                   radius: 60,
                   child: CircleAvatar(
                     radius: 55,

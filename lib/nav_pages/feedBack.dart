@@ -18,7 +18,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
           title: const Text(
             "Picleaf",
             style: TextStyle(
-                color: Color.fromRGBO(102, 204, 102, 100),
+                color: Color.fromRGBO(102, 204, 102, 1.0),
                 fontWeight: FontWeight.bold),
           ),
           backgroundColor: Colors.white,
@@ -35,18 +35,18 @@ class _FeedbackPageState extends State<FeedbackPage> {
                 " ",
               ),
               const Text(
-                "FEEDBACK",
+                "Feedback",
                 style: TextStyle(
-                  fontSize: 32.0,
-                  fontFamily: 'RobotoBold',
-                  fontWeight: FontWeight.bold,
-                ),
+                    fontSize: 32.0,
+                    fontFamily: 'RobotoBold',
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromRGBO(102, 204, 102, 1.0)),
               ),
               const Text(
                 "Give us your feedback!",
                 style: TextStyle(
                   fontSize: 16.0,
-                  fontFamily: 'RobotoBold',
+                  fontFamily: 'RobotoMedium',
                 ),
               ),
               Padding(
@@ -84,7 +84,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                     MaterialButton(
                       height: 60.0,
                       minWidth: double.infinity,
-                      color: const Color.fromRGBO(102, 204, 102, 100),
+                      color: const Color.fromRGBO(102, 204, 102, 1.0),
                       onPressed: () {},
                       child: const Text(
                         "SUBMIT",
@@ -102,7 +102,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                         style: TextStyle(
                             fontSize: 30,
                             fontFamily: 'RobotoBold',
-                            color: Color.fromRGBO(102, 204, 102, 100)),
+                            color: Color.fromRGBO(102, 204, 102, 1.0)),
                         textAlign: TextAlign.center,
                       ),
                     ),
