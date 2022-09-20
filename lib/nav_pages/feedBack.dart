@@ -107,34 +107,48 @@ class _FeedbackPageState extends State<feedbackPage> {
                       ),
                     ),
                     Column(
-                      children: [
-                        TextButton.icon(
-                          // <-- TextButton
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.facebook,
-                            color: Colors.black,
-                            size: 35.0,
-                          ),
-                          label: Text('facebook.com/picleaf'),
-                          style: TextButton.styleFrom(
-                            primary: Colors.black,
+                      children: <Widget>[
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                          margin: const EdgeInsets.symmetric(horizontal: 0),
+                          child: TextButton.icon(
+                            // <-- TextButton
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.facebook,
+                              color: Colors.black,
+                              size: 35.0,
+                            ),
+                            label: const Text(
+                              'facebook.com/picleaf',
+                              style: TextStyle(fontFamily: 'RobotoMedium'),
+                            ),
+                            style: TextButton.styleFrom(
+                              foregroundColor: Colors.black,
+                            ),
                           ),
                         ),
-                        TextButton.icon(
-                          // <-- TextButton
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.email,
-                            color: Colors.black,
-                            size: 35.0,
-                          ),
+                        Container(
+                            padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
+                            margin: const EdgeInsets.symmetric(horizontal: 0),
+                            child: TextButton.icon(
+                              // <-- TextButton
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.email,
+                                color: Colors.black,
+                                size: 35.0,
+                              ),
 
-                          label: Text('picleaf@gmail.com'),
-                          style: TextButton.styleFrom(
-                            primary: Colors.black,
-                          ),
-                        )
+                              label: const Text(
+                                'picleaf@gmail.com',
+                                style: TextStyle(fontFamily: 'RobotoMedium'),
+                              ),
+
+                              style: TextButton.styleFrom(
+                                foregroundColor: Colors.black,
+                              ),
+                            )),
                       ],
                     )
                   ],
