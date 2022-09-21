@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-/* Imports para sa Machine Learning Side
+// Imports para sa Machine Learning Side
 import 'package:tflite/tflite.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
-*/
 
 class cameraPage extends StatefulWidget {
   const cameraPage({super.key});
@@ -14,7 +13,7 @@ class cameraPage extends StatefulWidget {
 class _CameraPageState extends State<cameraPage> {
   bool loading = true;
   // Lahat ng comment na ito ay para sa Machine Learning Side
-  /*
+
   late File _image;
   List? _output;
   final picker = ImagePicker();
@@ -73,7 +72,7 @@ class _CameraPageState extends State<cameraPage> {
 
     detectImage(_image);
   }
-*/
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,16 +96,17 @@ class _CameraPageState extends State<cameraPage> {
             height: 60,
           ),
           Center(
-              child: loading
-                  ? SizedBox(
-                      height: 250,
-                      width: 250,
-                      child: Column(children: <Widget>[
-                        Image.asset('assets/images/logo.png')
-                      ]),
-                    )
-                  : const Text(
-                      'Yung mga susunod sana dito yung ilalabas na output kapag na detect yung image') /*SizedBox(
+            child: loading
+                ? SizedBox(
+                    height: 250,
+                    width: 250,
+                    child: Column(children: <Widget>[
+                      Image.asset('assets/images/logo.png')
+                    ]),
+                  )
+                : /*const Text(
+                      'Yung mga susunod sana dito yung ilalabas na output kapag na detect yung image') */
+                SizedBox(
                     child: Column(children: <Widget>[
                       SizedBox(
                         height: 250,
@@ -129,8 +129,8 @@ class _CameraPageState extends State<cameraPage> {
                         height: 10,
                       )
                     ]),
-                  ),*/
-              ),
+                  ),
+          ),
           const SizedBox(
             height: 20,
           ),
@@ -167,7 +167,8 @@ class _CameraPageState extends State<cameraPage> {
                 children: <Widget>[
                   GestureDetector(
                     onTap: () {
-                      //Para sa pag open ng Camera pangkuha ng Image pickImage();
+                      //Para sa pag open ng Camera pangkuha ng Image
+                      pickImage();
                     },
                     child: Column(
                       children: <Widget>[
@@ -203,7 +204,8 @@ class _CameraPageState extends State<cameraPage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      //Para sa pag open ng Gallery pangkuha ng Image pickGalleryImage();
+                      //Para sa pag open ng Gallery pangkuha ng Image
+                      pickGalleryImage();
                     },
                     child: Column(
                       children: <Widget>[
