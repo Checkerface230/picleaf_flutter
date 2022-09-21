@@ -93,12 +93,12 @@ class _CameraPageState extends State<cameraPage> {
           child: Column(
         children: <Widget>[
           const SizedBox(
-            height: 60,
+            height: 112,
           ),
           Center(
             child: loading
                 ? SizedBox(
-                    height: 250,
+                    height: 330,
                     width: 250,
                     child: Column(children: <Widget>[
                       Image.asset('assets/images/logo.png')
@@ -109,48 +109,47 @@ class _CameraPageState extends State<cameraPage> {
                 SizedBox(
                     child: Column(children: <Widget>[
                       SizedBox(
-                        height: 250,
+                        height: 300,
                         child: Image.file(_image),
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       _output != null
                           ? Text(
                               '${_output![0]['label']}',
                               style: const TextStyle(
+                                  decoration: TextDecoration.underline,
+                                  decorationColor: Colors.black,
                                   fontSize: 18,
                                   fontFamily: 'RobotoMedium',
                                   color: Colors.black),
                               textAlign: TextAlign.center,
                             )
                           : Container(),
-                      const SizedBox(
-                        height: 10,
-                      )
                     ]),
                   ),
           ),
           const SizedBox(
-            height: 20,
+            height: 45,
           ),
           Container(
-            padding: const EdgeInsets.fromLTRB(10, 20, 10, 20),
+            padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(10))),
             child: const Text(
               'User Tip:\n Make sure that the picture is clear\n to maximize results.',
-              style: TextStyle(fontFamily: 'RobotoMedium', fontSize: 18),
+              style: TextStyle(fontFamily: 'RobotoMedium', fontSize: 16),
               textAlign: TextAlign.center,
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 15,
           ),
           Container(
             width: MediaQuery.of(context).size.width,
-            height: 159,
+            height: 77,
             decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(20),
@@ -160,7 +159,7 @@ class _CameraPageState extends State<cameraPage> {
                 color: Color.fromARGB(255, 75, 175, 78)),
             child: Column(children: <Widget>[
               const SizedBox(
-                height: 40,
+                height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -182,16 +181,16 @@ class _CameraPageState extends State<cameraPage> {
                           child: const Icon(
                             Icons.camera_alt,
                             color: Color(0xffeeeeee),
-                            size: 60,
+                            size: 40,
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 1,
                         ),
                         const Text(
                           'Take a Photo',
                           style: TextStyle(
-                              fontSize: 18,
+                              fontSize: 16,
                               fontFamily: 'RobotoMedium',
                               color: Color(0xffeeeeee)),
                           textAlign: TextAlign.center,
@@ -200,7 +199,7 @@ class _CameraPageState extends State<cameraPage> {
                     ),
                   ),
                   const SizedBox(
-                    width: 50,
+                    width: 90,
                   ),
                   GestureDetector(
                     onTap: () {
@@ -219,16 +218,16 @@ class _CameraPageState extends State<cameraPage> {
                           child: const Icon(
                             Icons.add,
                             color: Color(0xffeeeeee),
-                            size: 60,
+                            size: 40,
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 1,
                         ),
                         const Text(
                           'Add from Gallery',
                           style: TextStyle(
-                              fontSize: 18,
+                              fontSize: 16,
                               fontFamily: 'RobotoMedium',
                               color: Color(0xffeeeeee)),
                           textAlign: TextAlign.center,
