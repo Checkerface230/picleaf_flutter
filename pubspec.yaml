@@ -82,14 +82,14 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-  - assets/plant_disease_model.tflite
-  - assets/plant_labels.txt
   - assets/images/JC_pic.png
   - assets/images/Fritz_pic.png
   - assets/images/Russel_pic.png
   - assets/images/logo.png
   - assets/model_unquant.tflite
   - assets/labels.txt
+
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:

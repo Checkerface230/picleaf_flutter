@@ -9,7 +9,7 @@ class AboutUsPage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          "Picleaf",
+          "PicLeaf",
           style: TextStyle(
               color: Color.fromRGBO(102, 204, 102, 1.0),
               fontWeight: FontWeight.bold),
@@ -41,16 +41,17 @@ class AboutUsPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
               child: const Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lacus vitae ex congue euismod sed venenatis ex. Curabitur ornare quis tortor eu volutpat. Integer euismod ex et massa pretium eleifend. Quisque mollis aliquet metus, id hendrerit orci ultricies in. Duis enim purus, sagittis eget turpis quis, egestas iaculis ex.',
+                'PicLeaf is a software that uses image processing to detect the disease that the plant may have according to the abnormalities of its leaves. It mainly focuses on fruit-bearing plants that garden lovers or the plantitos and plantitas in the Philippines tend to plant most often.',
                 style: TextStyle(
                     fontSize: 18,
                     fontFamily: 'RobotoMedium',
-                    color: Colors.black),
+                    color: Colors.black,
+                    height: 1.5),
                 textAlign: TextAlign.justify,
               ),
             ),
             const SizedBox(
-              height: 10,
+              height: 5,
             ),
             Container(
               padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),

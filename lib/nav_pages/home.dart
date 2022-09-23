@@ -108,7 +108,7 @@ class _HomePageState extends State<homePage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          "Picleaf",
+          "PicLeaf",
           style: TextStyle(
               color: Color.fromRGBO(102, 204, 102, 1.0),
               fontWeight: FontWeight.bold),
@@ -206,7 +206,7 @@ class _HomePageState extends State<homePage> {
                           padding: const EdgeInsets.all(8),
                           color: const Color.fromARGB(255, 75, 175, 78),
                           child: const Text(
-                            "Blueberry",
+                            "Bell Pepper",
                             style: TextStyle(
                                 fontSize: 20,
                                 fontFamily: 'RobotoMedium',
@@ -239,7 +239,7 @@ class _HomePageState extends State<homePage> {
                           padding: const EdgeInsets.all(8),
                           color: const Color.fromARGB(255, 75, 175, 78),
                           child: const Text(
-                            "Grape",
+                            "Potato",
                             style: TextStyle(
                                 fontSize: 20,
                                 fontFamily: 'RobotoMedium',
@@ -250,7 +250,7 @@ class _HomePageState extends State<homePage> {
                           padding: const EdgeInsets.all(8),
                           color: const Color.fromARGB(255, 75, 175, 78),
                           child: const Text(
-                            "Orange",
+                            "Tomato",
                             style: TextStyle(
                                 fontSize: 20,
                                 fontFamily: 'RobotoMedium',

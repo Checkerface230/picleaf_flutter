@@ -16,7 +16,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            "Picleaf",
+            "PicLeaf",
             style: TextStyle(
                 color: Color.fromRGBO(102, 204, 102, 1.0),
                 fontWeight: FontWeight.bold),

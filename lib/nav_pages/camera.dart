@@ -80,7 +80,7 @@ class _CameraPageState extends State<cameraPage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          "Picleaf",
+          "PicLeaf",
           style: TextStyle(
               color: Color.fromRGBO(102, 204, 102, 1.0),
               fontWeight: FontWeight.bold),
@@ -117,13 +117,13 @@ class _CameraPageState extends State<cameraPage> {
                       ),
                       _output != null
                           ? Text(
-                              '${_output![0]['label']}',
+                              'Leaf Detected:\n' '${_output![0]['label']}',
                               style: const TextStyle(
-                                  decoration: TextDecoration.underline,
                                   decorationColor: Colors.black,
                                   fontSize: 18,
                                   fontFamily: 'RobotoMedium',
-                                  color: Colors.black),
+                                  color: Colors.black,
+                                  height: 1.5),
                               textAlign: TextAlign.center,
                             )
                           : Container(),
@@ -199,7 +199,7 @@ class _CameraPageState extends State<cameraPage> {
                     ),
                   ),
                   const SizedBox(
-                    width: 90,
+                    width: 50,
                   ),
                   GestureDetector(
                     onTap: () {
