@@ -134,7 +134,7 @@ class _HomePageState extends State<homePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             Container(
               padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
