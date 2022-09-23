@@ -1,2 +1,15 @@
-0 Cat
-1 Dog
+Bell Pepper Leaf with a Bacterial Spot
+Healthy Bell Pepper Leaf
+Potato Leaf with an Early Blight
+Health Potato Leaf
+Potato Leaf with a Late Blight
+Tomato Leaf with a Bacterial Spot
+Tomato Leaf with an Early Blight
+Healthy Tomato Leaf
+Tomato Leaf with a Late Blight
+Tomato Leaf with a Mold
+Tomato Leaf with Septoria Leaf Spots
+Tomato Leaf with Spotted Spider Mites
+Tomato Leaf with Target Spots
+Tomato Leaf with a Mosaic Virus
+Tomato Leaf with a Yellow Leaf Curl Virus
