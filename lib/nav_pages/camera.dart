@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_is_empty
+
 import 'package:flutter/material.dart';
 // Imports para sa Machine Learning Side
 import 'package:tflite/tflite.dart';
@@ -29,13 +31,17 @@ class _CameraPageState extends State<cameraPage> {
   detectImage(File image) async {
     var output = await Tflite.runModelOnImage(
         path: image.path,
-        numResults: 38,
+        numResults: 15,
         threshold: 0.6,
         imageMean: 127.5,
         imageStd: 127.5);
     setState(() {
       _output = output;
-      loading = false;
+      if (_output != null && _output!.length > 0) {
+        loading = false;
+      } else {
+        _output?[0] = 'Object cannot be identified';
+      }
     });
   }
 
@@ -117,7 +123,7 @@ class _CameraPageState extends State<cameraPage> {
                       ),
                       _output != null
                           ? Text(
-                              'Leaf Detected:\n' '${_output![0]['label']}',
+                              'Leaf Detected:\n${_output?.elementAt(0)['label'] ?? 'Object cannot be identified.'}',
                               style: const TextStyle(
                                   decorationColor: Colors.black,
                                   fontSize: 18,
