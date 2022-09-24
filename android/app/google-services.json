@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "4357911115",
+    "project_id": "picleaf-f9fc0",
+    "storage_bucket": "picleaf-f9fc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4357911115:android:71a0c649dae0e405f253ce",
+        "android_client_info": {
+          "package_name": "com.example.picleaf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4357911115-gipppc1g5n5a6noi34sth5l5avcupv60.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAobBq244H_ejKk0NmxTZrnHcOTU00DDkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "4357911115-gipppc1g5n5a6noi34sth5l5avcupv60.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
