@@ -38,6 +38,8 @@ dependencies:
   tfx: ^0.0.1
   flutter_native_splash: ^2.2.9
   tflite: ^1.1.2
+  cloud_firestore: ^3.4.9
+
 
 flutter_native_splash:
   color: "#ffffff"

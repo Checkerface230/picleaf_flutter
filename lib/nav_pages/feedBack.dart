@@ -31,13 +31,13 @@ class _FeedbackPageState extends State<FeedbackPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              const Text(
-                " ",
+              const SizedBox(
+                height: 20,
               ),
               const Text(
                 "Feedback",
                 style: TextStyle(
-                    fontSize: 32.0,
+                    fontSize: 30.0,
                     fontFamily: 'RobotoBold',
                     fontWeight: FontWeight.bold,
                     color: Color.fromRGBO(102, 204, 102, 1.0)),
@@ -45,9 +45,12 @@ class _FeedbackPageState extends State<FeedbackPage> {
               const Text(
                 "Give us your feedback!",
                 style: TextStyle(
-                  fontSize: 16.0,
+                  fontSize: 18.0,
                   fontFamily: 'RobotoMedium',
                 ),
+              ),
+              const SizedBox(
+                height: 20,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 32.0),
@@ -56,10 +59,11 @@ class _FeedbackPageState extends State<FeedbackPage> {
                     const SizedBox(height: 16.0),
                     const TextField(
                       decoration: InputDecoration(
-                          filled: true,
-                          fillColor: Colors.white,
-                          hintText: "Name",
-                          border: InputBorder.none),
+                        filled: true,
+                        fillColor: Colors.white,
+                        hintText: "Name",
+                        border: OutlineInputBorder(),
+                      ),
                     ),
                     const SizedBox(height: 8.0),
                     const TextField(
@@ -67,22 +71,22 @@ class _FeedbackPageState extends State<FeedbackPage> {
                         filled: true,
                         fillColor: Colors.white,
                         hintText: "Email",
-                        border: InputBorder.none,
+                        border: OutlineInputBorder(),
                       ),
                     ),
                     const SizedBox(height: 8.0),
                     const TextField(
-                      maxLines: 7,
+                      maxLines: 6,
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
                         hintText: "Message",
-                        border: InputBorder.none,
+                        border: OutlineInputBorder(),
                       ),
                     ),
                     const SizedBox(height: 8.0),
                     MaterialButton(
-                      height: 60.0,
+                      height: 50.0,
                       minWidth: double.infinity,
                       color: const Color.fromRGBO(102, 204, 102, 1.0),
                       onPressed: () {},
@@ -94,6 +98,9 @@ class _FeedbackPageState extends State<FeedbackPage> {
                           color: Colors.white,
                         ),
                       ),
+                    ),
+                    const SizedBox(
+                      height: 10,
                     ),
                     Container(
                       padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
