@@ -39,6 +39,7 @@ dependencies:
   flutter_native_splash: ^2.2.9
   tflite: ^1.1.2
   cloud_firestore: ^3.4.9
+  firebase_core: ^1.23.0
 
 
 flutter_native_splash:

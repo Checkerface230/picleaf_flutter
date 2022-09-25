@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class FeedbackPage extends StatefulWidget {
@@ -8,6 +9,10 @@ class FeedbackPage extends StatefulWidget {
 }
 
 class _FeedbackPageState extends State<FeedbackPage> {
+  final nameOfuser = TextEditingController();
+  final emailOfuser = TextEditingController();
+  final messageOfuser = TextEditingController();
+
   List<bool> isTypeSelected = [false, false, false, true, true];
   @override
   Widget build(BuildContext context) {
@@ -57,7 +62,8 @@ class _FeedbackPageState extends State<FeedbackPage> {
                 child: Column(
                   children: <Widget>[
                     const SizedBox(height: 16.0),
-                    const TextField(
+                    TextField(
+                      controller: nameOfuser,
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
@@ -66,7 +72,8 @@ class _FeedbackPageState extends State<FeedbackPage> {
                       ),
                     ),
                     const SizedBox(height: 8.0),
-                    const TextField(
+                    TextField(
+                      controller: emailOfuser,
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
@@ -75,7 +82,8 @@ class _FeedbackPageState extends State<FeedbackPage> {
                       ),
                     ),
                     const SizedBox(height: 8.0),
-                    const TextField(
+                    TextField(
+                      controller: messageOfuser,
                       maxLines: 6,
                       decoration: InputDecoration(
                         filled: true,
@@ -89,7 +97,21 @@ class _FeedbackPageState extends State<FeedbackPage> {
                       height: 50.0,
                       minWidth: double.infinity,
                       color: const Color.fromRGBO(102, 204, 102, 1.0),
-                      onPressed: () {},
+                      onPressed: () {
+                        Map<String, dynamic> data = {
+                          "Name": nameOfuser.text,
+                          "Email": emailOfuser.text,
+                          "Message": messageOfuser.text,
+                        };
+                        setState(() {
+                          nameOfuser.clear();
+                          emailOfuser.clear();
+                          messageOfuser.clear();
+                        });
+                        FirebaseFirestore.instance
+                            .collection("FeedbackMessages")
+                            .add(data);
+                      },
                       child: const Text(
                         "SUBMIT",
                         style: TextStyle(
