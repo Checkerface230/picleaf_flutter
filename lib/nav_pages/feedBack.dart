@@ -62,35 +62,53 @@ class _FeedbackPageState extends State<FeedbackPage> {
                 child: Column(
                   children: <Widget>[
                     const SizedBox(height: 16.0),
-                    TextField(
+                    TextFormField(
                       controller: nameOfuser,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
                         hintText: "Name",
                         border: OutlineInputBorder(),
                       ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your Name';
+                        }
+                        return null;
+                      },
                     ),
                     const SizedBox(height: 8.0),
-                    TextField(
+                    TextFormField(
                       controller: emailOfuser,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
                         hintText: "Email",
                         border: OutlineInputBorder(),
                       ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your Email';
+                        }
+                        return null;
+                      },
                     ),
                     const SizedBox(height: 8.0),
-                    TextField(
+                    TextFormField(
                       controller: messageOfuser,
                       maxLines: 6,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
                         hintText: "Message",
                         border: OutlineInputBorder(),
                       ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your Message';
+                        }
+                        return null;
+                      },
                     ),
                     const SizedBox(height: 8.0),
                     MaterialButton(
@@ -102,6 +120,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                           "Name": nameOfuser.text,
                           "Email": emailOfuser.text,
                           "Message": messageOfuser.text,
+                          "Time": FieldValue.serverTimestamp(),
                         };
                         setState(() {
                           nameOfuser.clear();
