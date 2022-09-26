@@ -1,6 +1,27 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+class SimpleDialog extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
+  final title;
+  const SimpleDialog(this.title, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: const Text('Alert'),
+      content: Text(title),
+      actions: [
+        TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            child: const Text('OK'))
+      ],
+    );
+  }
+}
+
 class FeedbackPage extends StatefulWidget {
   const FeedbackPage({super.key});
 
@@ -116,6 +137,11 @@ class _FeedbackPageState extends State<FeedbackPage> {
                       minWidth: double.infinity,
                       color: const Color.fromRGBO(102, 204, 102, 1.0),
                       onPressed: () {
+                        showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return const SimpleDialog('Feedback Submitted');
+                            });
                         Map<String, dynamic> data = {
                           "Name": nameOfuser.text,
                           "Email": emailOfuser.text,
