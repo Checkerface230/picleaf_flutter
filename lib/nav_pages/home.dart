@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:picleaf/nav_pages/plant.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});
@@ -7,24 +8,35 @@ class homePage extends StatefulWidget {
   State<homePage> createState() => _HomePageState();
 }
 
+List<String> plants = [
+  "Bell Pepper",
+  "Cassava",
+  "Grape",
+  "Potato",
+  "Strawberry",
+  "Tomato",
+];
+//Ang widget na ito ay para sana sa Card Implementation ng mga plants
+/*Widget plantTemplate(plant) {
+  return GestureDetector(
+      onTap: () => {},
+      child: Card(
+          margin: const EdgeInsets.all(8),
+          color: const Color.fromARGB(255, 75, 175, 78),
+          child: Center(
+            child: Text(
+              plant,
+              style: const TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'RobotoMedium',
+                  color: Color(0xffeeeeee)),
+            ),
+          )));
+}*/
+
 class CustomSearchDelegate extends SearchDelegate {
   // Demo list to show querying
-  List<String> searchTerms = [
-    "Apple",
-    "Blueberry",
-    "Cherry",
-    "Corn",
-    "Grape",
-    "Orange",
-    "Peach",
-    "Pepper",
-    "Potato",
-    "Raspberry",
-    "Soybean",
-    "Squash",
-    "Strawberry",
-    "Tomato",
-  ];
+
   CustomSearchDelegate({String hinttext = "Search plants here"})
       : super(searchFieldLabel: hinttext);
 
@@ -57,7 +69,7 @@ class CustomSearchDelegate extends SearchDelegate {
   @override
   Widget buildResults(BuildContext context) {
     List<String> matchQuery = [];
-    for (var fruit in searchTerms) {
+    for (var fruit in plants) {
       if (fruit.toLowerCase().contains(query.toLowerCase())) {
         matchQuery.add(fruit);
       }
@@ -81,7 +93,7 @@ class CustomSearchDelegate extends SearchDelegate {
   @override
   Widget buildSuggestions(BuildContext context) {
     List<String> matchQuery = [];
-    for (var fruit in searchTerms) {
+    for (var fruit in plants) {
       if (fruit.toLowerCase().contains(query.toLowerCase())) {
         matchQuery.add(fruit);
       }
@@ -192,72 +204,123 @@ class _HomePageState extends State<homePage> {
                       crossAxisCount: 2,
                       children: <Widget>[
                         Container(
-                          padding: const EdgeInsets.all(8),
-                          color: const Color.fromARGB(255, 75, 175, 78),
-                          child: const Text(
-                            "Apple",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: 'RobotoMedium',
-                                color: Color(0xffeeeeee)),
-                          ),
-                        ),
+                            padding: const EdgeInsets.all(8),
+                            color: const Color.fromARGB(255, 75, 175, 78),
+                            child: Center(
+                              child: TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) => SecondPage(
+                                                plantname: 'SecondPage')));
+                                  },
+                                  child: const Text(
+                                    "Bell Pepper",
+                                    style: TextStyle(
+                                        fontSize: 19,
+                                        fontFamily: 'RobotoMedium',
+                                        color: Color(0xffeeeeee)),
+                                  )),
+                            )),
                         Container(
-                          padding: const EdgeInsets.all(8),
-                          color: const Color.fromARGB(255, 75, 175, 78),
-                          child: const Text(
-                            "Bell Pepper",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: 'RobotoMedium',
-                                color: Color(0xffeeeeee)),
-                          ),
-                        ),
+                            padding: const EdgeInsets.all(8),
+                            color: const Color.fromARGB(255, 75, 175, 78),
+                            child: Center(
+                              child: TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) => SecondPage(
+                                                plantname: 'SecondPage')));
+                                  },
+                                  child: const Text(
+                                    "Cassava",
+                                    style: TextStyle(
+                                        fontSize: 19,
+                                        fontFamily: 'RobotoMedium',
+                                        color: Color(0xffeeeeee)),
+                                  )),
+                            )),
                         Container(
-                          padding: const EdgeInsets.all(8),
-                          color: const Color.fromARGB(255, 75, 175, 78),
-                          child: const Text(
-                            "Cherry",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: 'RobotoMedium',
-                                color: Color(0xffeeeeee)),
-                          ),
-                        ),
+                            padding: const EdgeInsets.all(8),
+                            color: const Color.fromARGB(255, 75, 175, 78),
+                            child: Center(
+                              child: TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) => SecondPage(
+                                                plantname: 'Grape')));
+                                  },
+                                  child: const Text(
+                                    "Grape",
+                                    style: TextStyle(
+                                        fontSize: 19,
+                                        fontFamily: 'RobotoMedium',
+                                        color: Color(0xffeeeeee)),
+                                  )),
+                            )),
                         Container(
-                          padding: const EdgeInsets.all(8),
-                          color: const Color.fromARGB(255, 75, 175, 78),
-                          child: const Text(
-                            "Corn",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: 'RobotoMedium',
-                                color: Color(0xffeeeeee)),
-                          ),
-                        ),
+                            padding: const EdgeInsets.all(8),
+                            color: const Color.fromARGB(255, 75, 175, 78),
+                            child: Center(
+                              child: TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) => SecondPage(
+                                                plantname: 'SecondPage')));
+                                  },
+                                  child: const Text(
+                                    "Potato",
+                                    style: TextStyle(
+                                        fontSize: 19,
+                                        fontFamily: 'RobotoMedium',
+                                        color: Color(0xffeeeeee)),
+                                  )),
+                            )),
                         Container(
-                          padding: const EdgeInsets.all(8),
-                          color: const Color.fromARGB(255, 75, 175, 78),
-                          child: const Text(
-                            "Potato",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: 'RobotoMedium',
-                                color: Color(0xffeeeeee)),
-                          ),
-                        ),
+                            padding: const EdgeInsets.all(8),
+                            color: const Color.fromARGB(255, 75, 175, 78),
+                            child: Center(
+                              child: TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) => SecondPage(
+                                                plantname: 'SecondPage')));
+                                  },
+                                  child: const Text(
+                                    "Strawberry",
+                                    style: TextStyle(
+                                        fontSize: 19,
+                                        fontFamily: 'RobotoMedium',
+                                        color: Color(0xffeeeeee)),
+                                  )),
+                            )),
                         Container(
-                          padding: const EdgeInsets.all(8),
-                          color: const Color.fromARGB(255, 75, 175, 78),
-                          child: const Text(
-                            "Tomato",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: 'RobotoMedium',
-                                color: Color(0xffeeeeee)),
-                          ),
-                        ),
+                            padding: const EdgeInsets.all(8),
+                            color: const Color.fromARGB(255, 75, 175, 78),
+                            child: Center(
+                              child: TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) => SecondPage(
+                                                plantname: 'SecondPage')));
+                                  },
+                                  child: const Text(
+                                    "Tomato",
+                                    style: TextStyle(
+                                        fontSize: 19,
+                                        fontFamily: 'RobotoMedium',
+                                        color: Color(0xffeeeeee)),
+                                  )),
+                            )),
                       ],
+                      // Ang comment na sumunod dito ay para sana sa Card Widget ng mga plants kaso di gagana yung onpressed pag ganun
+                      //  plants.map((plant) => plantTemplate(plant)).toList(),
+                      /**/
                     ),
                   ),
                 ],
