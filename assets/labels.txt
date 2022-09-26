@@ -1,15 +1,24 @@
-Bell Pepper Leaf with a Bacterial Spot
+Grape Leaf with Black Rot
+Grape Leaf with Black Measles
+Healthy Grape Leaf
+Grape Leaf with Blight
+Bell Pepper Leaf with Bacterial Spot
 Healthy Bell Pepper Leaf
-Potato Leaf with an Early Blight
-Health Potato Leaf
-Potato Leaf with a Late Blight
-Tomato Leaf with a Bacterial Spot
-Tomato Leaf with an Early Blight
+Healthy Potato Leaf
+Potato Leaf with Blight
+Healthy Strawberry Leaf
+Strawberry Leaf with Leaf Scorch
+Tomato Leaf with Bacterial Spot
+Tomato Leaf with Blight
 Healthy Tomato Leaf
-Tomato Leaf with a Late Blight
-Tomato Leaf with a Mold
-Tomato Leaf with Septoria Leaf Spots
-Tomato Leaf with Spotted Spider Mites
-Tomato Leaf with Target Spots
-Tomato Leaf with a Mosaic Virus
-Tomato Leaf with a Yellow Leaf Curl Virus
+Tomato Leaf with Leaf Mold
+Tomato Leaf with Septoria Leaf Spot
+Tomato Leaf with Spider Mites
+Tomato Leaf with Target Spot
+Tomato Leaf with Mosaic Virus
+Tomato Leaf with Yellow Leaf Curl Virus
+Cassava Leaf with Bacterial Blight
+Cassava Leaf with Brown Streak Disease
+Cassava Leaf with Green Mottle
+Healthy Cassava Leaf
+Cassava Leaf with Mosaic Disease

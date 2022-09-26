@@ -31,7 +31,7 @@ class _CameraPageState extends State<cameraPage> {
   detectImage(File image) async {
     var output = await Tflite.runModelOnImage(
         path: image.path,
-        numResults: 15,
+        numResults: 24,
         threshold: 0.6,
         imageMean: 127.5,
         imageStd: 127.5);
