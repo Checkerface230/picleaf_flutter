@@ -1,6 +1,6 @@
 {
-  "name": "picleaf",
-  "short_name": "picleaf",
+  "name": "picleaf_flutter",
+  "short_name": "picleaf_flutter",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#FFFFFF",
