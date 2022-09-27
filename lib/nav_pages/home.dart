@@ -211,8 +211,9 @@ class _HomePageState extends State<homePage> {
                                   onPressed: () {
                                     Navigator.of(context).push(
                                         MaterialPageRoute(
-                                            builder: (context) => SecondPage(
-                                                plantname: 'SecondPage')));
+                                            builder: (context) =>
+                                                const SecondPage(
+                                                    plantname: 'Bell Pepper')));
                                   },
                                   child: const Text(
                                     "Bell Pepper",
@@ -230,8 +231,9 @@ class _HomePageState extends State<homePage> {
                                   onPressed: () {
                                     Navigator.of(context).push(
                                         MaterialPageRoute(
-                                            builder: (context) => SecondPage(
-                                                plantname: 'SecondPage')));
+                                            builder: (context) =>
+                                                const SecondPage(
+                                                    plantname: 'Cassava')));
                                   },
                                   child: const Text(
                                     "Cassava",
@@ -249,8 +251,9 @@ class _HomePageState extends State<homePage> {
                                   onPressed: () {
                                     Navigator.of(context).push(
                                         MaterialPageRoute(
-                                            builder: (context) => SecondPage(
-                                                plantname: 'Grape')));
+                                            builder: (context) =>
+                                                const SecondPage(
+                                                    plantname: 'Grape')));
                                   },
                                   child: const Text(
                                     "Grape",
@@ -268,8 +271,9 @@ class _HomePageState extends State<homePage> {
                                   onPressed: () {
                                     Navigator.of(context).push(
                                         MaterialPageRoute(
-                                            builder: (context) => SecondPage(
-                                                plantname: 'SecondPage')));
+                                            builder: (context) =>
+                                                const SecondPage(
+                                                    plantname: 'Potato')));
                                   },
                                   child: const Text(
                                     "Potato",
@@ -287,8 +291,9 @@ class _HomePageState extends State<homePage> {
                                   onPressed: () {
                                     Navigator.of(context).push(
                                         MaterialPageRoute(
-                                            builder: (context) => SecondPage(
-                                                plantname: 'SecondPage')));
+                                            builder: (context) =>
+                                                const SecondPage(
+                                                    plantname: 'Strawberry')));
                                   },
                                   child: const Text(
                                     "Strawberry",
@@ -306,8 +311,9 @@ class _HomePageState extends State<homePage> {
                                   onPressed: () {
                                     Navigator.of(context).push(
                                         MaterialPageRoute(
-                                            builder: (context) => SecondPage(
-                                                plantname: 'SecondPage')));
+                                            builder: (context) =>
+                                                const SecondPage(
+                                                    plantname: 'Tomato')));
                                   },
                                   child: const Text(
                                     "Tomato",

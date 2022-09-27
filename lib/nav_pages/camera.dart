@@ -122,15 +122,20 @@ class _CameraPageState extends State<cameraPage> {
                         height: 10,
                       ),
                       _output != null
-                          ? Text(
-                              'Leaf Detected:\n${_output?.elementAt(0)['label'] ?? 'Object cannot be identified.'}',
-                              style: const TextStyle(
-                                  decorationColor: Colors.black,
-                                  fontSize: 18,
-                                  fontFamily: 'RobotoMedium',
-                                  color: Colors.black,
-                                  height: 1.5),
-                              textAlign: TextAlign.center,
+                          ? Column(
+                              children: <Widget>[
+                                Text(
+                                  'Leaf Detected:\n${_output?.elementAt(0)['label'] ?? 'Object cannot be identified.'}',
+                                  style: const TextStyle(
+                                      decorationColor: Colors.black,
+                                      fontSize: 18,
+                                      fontFamily: 'RobotoMedium',
+                                      color: Colors.black,
+                                      height: 1.5),
+                                  textAlign: TextAlign.center,
+                                ),
+                                Container()
+                              ],
                             )
                           : Container(),
                     ]),

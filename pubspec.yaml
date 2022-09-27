@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   image_picker: ^0.8.5+3
   tfx: ^0.0.1
-  flutter_native_splash: ^2.2.10
+  flutter_native_splash: ^2.2.10+1
   tflite: ^1.1.2
   cloud_firestore: ^3.4.9
   firebase_core: ^1.23.0
@@ -46,10 +46,8 @@ dependencies:
 flutter_native_splash:
   color: "#ffffff"
   image: assets/images/logo.png
-  web: false
-  chrome: false
-  edge: false
-  
+  web: true
+ 
 
 dev_dependencies:
   flutter_test:
@@ -120,6 +118,9 @@ flutter:
     - family: RobotoMedium
       fonts:
         - asset: assets\fonts\Roboto-Medium.ttf   
+    - family: RobotoLight
+      fonts: 
+        - asset: assets\fonts\Roboto-Light.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

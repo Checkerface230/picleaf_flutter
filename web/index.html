@@ -1,4 +1,6 @@
-<!DOCTYPE html><html><head>
+
+<!DOCTYPE html><html>
+  <head>
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
@@ -21,13 +23,13 @@
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="picleaf">
+  <meta name="apple-mobile-web-app-title" content="picleaf_flutter">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <title>picleaf</title>
+  <title>picleaf_flutter</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
@@ -40,11 +42,28 @@
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
   <script src="splash/splash.js"></script>
 </head>
-<body>  <picture id="splash">
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script>
+  import { initializeApp } from 'firebase/app';
+  import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+    var firebaseConfig = {
+  apiKey: "AIzaSyCCsRyi-2_jLBUz1448MuosrF4P0dzEPP0",
+  authDomain: "picleaf-f9fc0.firebaseapp.com",
+  databaseURL: "https://picleaf-f9fc0-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "picleaf-f9fc0",
+  storageBucket: "picleaf-f9fc0.appspot.com",
+  messagingSenderId: "4357911115",
+  appId: "1:4357911115:web:86eb5d6d976f6a62f253ce"
+};
+    firebase.initializeApp(firebaseConfig);
+</script>
+<body>
+    <picture id="splash">
       <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
       <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
       <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
   </picture>
+  
 
   <script>
     window.addEventListener('load', function(ev) {
@@ -52,11 +71,12 @@
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
         }
-      }).then(function(engineInitializer) {
-        return engineInitializer.initializeEngine();
-      }).then(function(appRunner) {
-        return appRunner.runApp();
       });
     });
   </script>
