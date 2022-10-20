@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class CustomCard extends StatelessWidget {
+class ListViewCard extends StatelessWidget {
   final String title;
   final Color? textColor;
   final void Function()? onPressed;
   final Image image;
 
-  const CustomCard(
+  const ListViewCard(
       {super.key,
       required this.title,
       required this.onPressed,
@@ -15,6 +15,8 @@ class CustomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Card();
+    return const Card(
+      color: Color.fromARGB(255, 75, 175, 78),
+    );
   }
 }
