@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:picleaf/nav_pages/plant.dart';
+import 'package:picleaf/widgets/plant.dart';
+import '../widgets/card.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});
@@ -16,23 +17,6 @@ List<String> plants = [
   "Strawberry",
   "Tomato",
 ];
-//Ang widget na ito ay para sana sa Card Implementation ng mga plants
-/*Widget plantTemplate(plant) {
-  return GestureDetector(
-      onTap: () => {},
-      child: Card(
-          margin: const EdgeInsets.all(8),
-          color: const Color.fromARGB(255, 75, 175, 78),
-          child: Center(
-            child: Text(
-              plant,
-              style: const TextStyle(
-                  fontSize: 20,
-                  fontFamily: 'RobotoMedium',
-                  color: Color(0xffeeeeee)),
-            ),
-          )));
-}*/
 
 class CustomSearchDelegate extends SearchDelegate {
   // Demo list to show querying
@@ -179,7 +163,7 @@ class _HomePageState extends State<homePage> {
                     padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                     margin: const EdgeInsets.symmetric(horizontal: 0),
                     child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: const <Widget>[
                         Expanded(
                           child: Text('List of Plants',
@@ -192,142 +176,76 @@ class _HomePageState extends State<homePage> {
                       ],
                     ),
                   ),
-                  Container(
-                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                    margin: const EdgeInsets.symmetric(horizontal: 0),
-                    child: GridView.count(
-                      physics: const ScrollPhysics(),
-                      shrinkWrap: true,
-                      padding: const EdgeInsets.all(20),
-                      crossAxisSpacing: 18,
-                      mainAxisSpacing: 18,
-                      crossAxisCount: 2,
-                      children: <Widget>[
-                        Container(
-                            padding: const EdgeInsets.all(8),
-                            color: const Color.fromARGB(255, 75, 175, 78),
-                            child: Center(
-                              child: TextButton(
-                                  onPressed: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const SecondPage(
-                                                    plantname: 'Bell Pepper')));
-                                  },
-                                  child: const Text(
-                                    "Bell Pepper",
-                                    style: TextStyle(
-                                        fontSize: 19,
-                                        fontFamily: 'RobotoMedium',
-                                        color: Color(0xffeeeeee)),
-                                  )),
-                            )),
-                        Container(
-                            padding: const EdgeInsets.all(8),
-                            color: const Color.fromARGB(255, 75, 175, 78),
-                            child: Center(
-                              child: TextButton(
-                                  onPressed: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const SecondPage(
-                                                    plantname: 'Cassava')));
-                                  },
-                                  child: const Text(
-                                    "Cassava",
-                                    style: TextStyle(
-                                        fontSize: 19,
-                                        fontFamily: 'RobotoMedium',
-                                        color: Color(0xffeeeeee)),
-                                  )),
-                            )),
-                        Container(
-                            padding: const EdgeInsets.all(8),
-                            color: const Color.fromARGB(255, 75, 175, 78),
-                            child: Center(
-                              child: TextButton(
-                                  onPressed: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const SecondPage(
-                                                    plantname: 'Grape')));
-                                  },
-                                  child: const Text(
-                                    "Grape",
-                                    style: TextStyle(
-                                        fontSize: 19,
-                                        fontFamily: 'RobotoMedium',
-                                        color: Color(0xffeeeeee)),
-                                  )),
-                            )),
-                        Container(
-                            padding: const EdgeInsets.all(8),
-                            color: const Color.fromARGB(255, 75, 175, 78),
-                            child: Center(
-                              child: TextButton(
-                                  onPressed: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const SecondPage(
-                                                    plantname: 'Potato')));
-                                  },
-                                  child: const Text(
-                                    "Potato",
-                                    style: TextStyle(
-                                        fontSize: 19,
-                                        fontFamily: 'RobotoMedium',
-                                        color: Color(0xffeeeeee)),
-                                  )),
-                            )),
-                        Container(
-                            padding: const EdgeInsets.all(8),
-                            color: const Color.fromARGB(255, 75, 175, 78),
-                            child: Center(
-                              child: TextButton(
-                                  onPressed: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const SecondPage(
-                                                    plantname: 'Strawberry')));
-                                  },
-                                  child: const Text(
-                                    "Strawberry",
-                                    style: TextStyle(
-                                        fontSize: 19,
-                                        fontFamily: 'RobotoMedium',
-                                        color: Color(0xffeeeeee)),
-                                  )),
-                            )),
-                        Container(
-                            padding: const EdgeInsets.all(8),
-                            color: const Color.fromARGB(255, 75, 175, 78),
-                            child: Center(
-                              child: TextButton(
-                                  onPressed: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const SecondPage(
-                                                    plantname: 'Tomato')));
-                                  },
-                                  child: const Text(
-                                    "Tomato",
-                                    style: TextStyle(
-                                        fontSize: 19,
-                                        fontFamily: 'RobotoMedium',
-                                        color: Color(0xffeeeeee)),
-                                  )),
-                            )),
-                      ],
-                      // Ang comment na sumunod dito ay para sana sa Card Widget ng mga plants kaso di gagana yung onpressed pag ganun
-                      //  plants.map((plant) => plantTemplate(plant)).toList(),
-                      /**/
-                    ),
+                  GridView.count(
+                    physics: const ScrollPhysics(),
+                    shrinkWrap: true,
+                    padding: const EdgeInsets.all(8.0),
+                    crossAxisSpacing: 20,
+                    mainAxisSpacing: 20,
+                    childAspectRatio: 3 / 4.2,
+                    crossAxisCount: 2,
+                    children: <Widget>[
+                      ListViewCard(
+                        title: "Bell Pepper",
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) =>
+                                  const SecondPage(plantname: 'Bell Pepper')));
+                        },
+                        imageOfPlant:
+                            "assets/Images_of_Plant/BellPeper_Image.jpg",
+                      ),
+                      ListViewCard(
+                        title: "Cassava",
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) =>
+                                  const SecondPage(plantname: 'Cassava')));
+                        },
+                        imageOfPlant:
+                            "assets/Images_of_Plant/BellPeper_Image.jpg",
+                      ),
+                      ListViewCard(
+                        title: "Grape",
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) =>
+                                  const SecondPage(plantname: 'Grape')));
+                        },
+                        imageOfPlant:
+                            "assets/Images_of_Plant/BellPeper_Image.jpg",
+                      ),
+                      ListViewCard(
+                        title: "Potato",
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) =>
+                                  const SecondPage(plantname: 'Potato')));
+                        },
+                        imageOfPlant:
+                            "assets/Images_of_Plant/BellPeper_Image.jpg",
+                      ),
+                      ListViewCard(
+                        title: "Strawberry",
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) =>
+                                  const SecondPage(plantname: 'Strawberry')));
+                        },
+                        imageOfPlant:
+                            "assets/Images_of_Plant/BellPeper_Image.jpg",
+                      ),
+                      ListViewCard(
+                        title: "Tomato",
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) =>
+                                  const SecondPage(plantname: 'Tomato')));
+                        },
+                        imageOfPlant:
+                            "assets/Images_of_Plant/BellPeper_Image.jpg",
+                      ),
+                    ],
                   ),
                 ],
               ),
