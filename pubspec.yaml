@@ -35,7 +35,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   image_picker: ^0.8.5+3
-  tfx: ^0.0.1
   flutter_native_splash: ^2.2.10+1
   tflite: ^1.1.2
   cloud_firestore: ^3.4.9
@@ -92,7 +91,7 @@ flutter:
   - assets/images/logo.png
   - assets/model_unquant.tflite
   - assets/labels.txt
-
+  - assets/Images_of_Plant/BellPeper_Image.jpg
 
 
   # To add assets to your application, add an assets section, like this:
