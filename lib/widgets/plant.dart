@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:picleaf/models/plant_display.dart';
 import 'package:flutter/material.dart';
-import 'package:picleaf/nav_pages/helpers/plantdiseasecard.dart';
+import 'package:picleaf/widgets/plantdiseasecard.dart';
 
 class SecondPage extends StatefulWidget {
   final String plantname;
