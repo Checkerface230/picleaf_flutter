@@ -1,5 +1,5 @@
 // ignore_for_file: prefer_is_empty
-
+import 'package:picleaf/widgets/plant.dart';
 import 'package:flutter/material.dart';
 // Imports para sa Machine Learning Side
 import 'package:tflite/tflite.dart';
@@ -13,6 +13,28 @@ class cameraPage extends StatefulWidget {
 }
 
 class _CameraPageState extends State<cameraPage> {
+  List<String> plants = [
+    "Bell Pepper",
+    "Cassava",
+    "Grape",
+    "Potato",
+    "Strawberry",
+    "Tomato",
+  ];
+  String getPlantName() {
+    String currentplant = "";
+    String mainString = _output?.elementAt(0)['label'];
+    for (int i = 0; i < plants.length; i++) {
+      if (mainString.contains(plants[i])) {
+        currentplant = plants[i];
+        break;
+      } else {
+        continue;
+      }
+    }
+    return currentplant;
+  }
+
   bool loading = true;
   // Lahat ng comment na ito ay para sa Machine Learning Side
 
@@ -123,6 +145,8 @@ class _CameraPageState extends State<cameraPage> {
                       ),
                       _output != null
                           ? Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Text(
                                   'Leaf Detected:\n${_output?.elementAt(0)['label'] ?? 'Object cannot be identified.'}',
@@ -134,7 +158,39 @@ class _CameraPageState extends State<cameraPage> {
                                       height: 1.5),
                                   textAlign: TextAlign.center,
                                 ),
-                                Container()
+                                const SizedBox(height: 20),
+                                SizedBox(
+                                    child: Center(
+                                  child: TextButton(
+                                      onPressed: () {
+                                        Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    SecondPage(
+                                                        plantname:
+                                                            getPlantName())));
+                                      },
+                                      child: const Text(
+                                        "More Info",
+                                        style: TextStyle(
+                                          fontSize: 25,
+                                          fontFamily: 'RobotoMedium',
+                                          shadows: [
+                                            Shadow(
+                                                color: Color.fromARGB(
+                                                    255, 75, 175, 78),
+                                                offset: Offset(0, -5))
+                                          ],
+                                          color: Colors.transparent,
+                                          decoration: TextDecoration.underline,
+                                          decorationColor:
+                                              Color.fromARGB(255, 75, 175, 78),
+                                          decorationThickness: 4,
+                                          decorationStyle:
+                                              TextDecorationStyle.solid,
+                                        ),
+                                      )),
+                                )),
                               ],
                             )
                           : Container(),

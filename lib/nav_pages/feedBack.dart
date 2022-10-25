@@ -10,7 +10,7 @@ class SimpleDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text('Alert'),
+      title: const Text('Feedback Sent'),
       content: Text(title),
       actions: [
         TextButton(
@@ -101,7 +101,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                         ],
                         validator: (nameOfuser) {
                           if (nameOfuser == null || nameOfuser.isEmpty) {
-                            return 'Please enter your Name';
+                            return 'Please enter your name.';
                           }
                           return null;
                         },
@@ -117,14 +117,14 @@ class _FeedbackPageState extends State<FeedbackPage> {
                         ),
                         validator: (emailOfuser) {
                           if (emailOfuser == null || emailOfuser.isEmpty) {
-                            return 'Please enter your Email';
+                            return 'Please enter your email.';
                           } else if (emailOfuser.isNotEmpty) {
                             String emailOfuser1 = emailOfuser.toString();
                             String pattern =
                                 r"^(([^<>()[\]\\.,;:\s@\']+(\.[^<>()[\]\\.,;:\s@\']+)*)|(\'.+\'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$";
                             if (RegExp(pattern).hasMatch(emailOfuser1) ==
                                 false) {
-                              return 'Please enter your Email Properly';
+                              return 'Please enter your email properly.';
                             }
                           }
                           return null;
@@ -147,7 +147,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                         ],
                         validator: (messageOfuser) {
                           if (messageOfuser == null || messageOfuser.isEmpty) {
-                            return 'Please enter your Message';
+                            return 'Please enter a message.';
                           }
                           return null;
                         },
@@ -163,7 +163,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return const SimpleDialog(
-                                      'Feedback Submitted');
+                                      'Your feedback has been submitted.');
                                 });
                             Map<String, dynamic> data = {
                               "Name": nameOfuser.text,
