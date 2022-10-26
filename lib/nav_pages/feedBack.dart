@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:url_launcher/link.dart';
 
 class SimpleDialog extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
@@ -207,46 +208,63 @@ class _FeedbackPageState extends State<FeedbackPage> {
                       Column(
                         children: <Widget>[
                           Container(
-                            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                            margin: const EdgeInsets.symmetric(horizontal: 0),
-                            child: TextButton.icon(
-                              // <-- TextButton
-                              onPressed: () {},
-                              icon: const Icon(
-                                Icons.facebook,
-                                color: Colors.black,
-                                size: 35.0,
+                              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                              margin: const EdgeInsets.symmetric(horizontal: 0),
+                              child: Link(
+                                  target: LinkTarget.blank,
+                                  uri: Uri.parse(
+                                      'https://www.facebook.com/picleafapp'),
+                                  builder: ((context, followLink) =>
+                                      TextButton.icon(
+                                        // <-- TextButton
+                                        onPressed: followLink,
+                                        icon: const Icon(
+                                          Icons.facebook,
+                                          color: Colors.black,
+                                          size: 40.0,
+                                        ),
+
+                                        label: const Text(
+                                          'PicLeaf',
+                                          style: TextStyle(
+                                              fontFamily: 'RobotoMedium',
+                                              fontSize: 20),
+                                        ),
+
+                                        style: TextButton.styleFrom(
+                                          foregroundColor: Colors.black,
+                                        ),
+                                      ))) /**/
                               ),
-                              label: const Text(
-                                'facebook.com/picleaf',
-                                style: TextStyle(fontFamily: 'RobotoMedium'),
-                              ),
-                              style: TextButton.styleFrom(
-                                foregroundColor: Colors.black,
-                              ),
-                            ),
-                          ),
                           Container(
                               padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
                               margin: const EdgeInsets.symmetric(horizontal: 0),
-                              child: TextButton.icon(
-                                // <-- TextButton
-                                onPressed: () {},
-                                icon: const Icon(
-                                  Icons.email,
-                                  color: Colors.black,
-                                  size: 35.0,
-                                ),
+                              child: Link(
+                                  target: LinkTarget.blank,
+                                  uri: Uri.parse(
+                                      'mailto:picleafcontactus@gmail.com'),
+                                  builder: ((context, followLink) =>
+                                      TextButton.icon(
+                                        // <-- TextButton
+                                        onPressed: followLink,
+                                        icon: const Icon(
+                                          Icons.email,
+                                          color: Colors.black,
+                                          size: 40.0,
+                                        ),
 
-                                label: const Text(
-                                  'picleaf@gmail.com',
-                                  style: TextStyle(fontFamily: 'RobotoMedium'),
-                                ),
+                                        label: const Text(
+                                          'PicLeaf Support',
+                                          style: TextStyle(
+                                              fontFamily: 'RobotoMedium',
+                                              fontSize: 20),
+                                        ),
 
-                                style: TextButton.styleFrom(
-                                  foregroundColor: Colors.black,
-                                ),
-                              )),
+                                        style: TextButton.styleFrom(
+                                          foregroundColor: Colors.black,
+                                        ),
+                                      ))) /**/
+                              ),
                         ],
                       )
                     ],

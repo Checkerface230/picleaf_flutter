@@ -67,6 +67,10 @@ class CustomSearchDelegate extends SearchDelegate {
             result,
             style: const TextStyle(fontFamily: 'RobotoMedium'),
           ),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => SecondPage(plantname: result)));
+          },
         );
       },
     );
@@ -91,6 +95,10 @@ class CustomSearchDelegate extends SearchDelegate {
             result,
             style: const TextStyle(fontFamily: 'RobotoMedium'),
           ),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => SecondPage(plantname: result)));
+          },
         );
       },
     );
@@ -139,7 +147,8 @@ class _HomePageState extends State<homePage> {
                   // delegate to customize the search bar
                   delegate: CustomSearchDelegate());
             },
-            icon: const Icon(Icons.search, color: Colors.black),
+            icon: const Icon(Icons.search,
+                color: Color.fromRGBO(102, 204, 102, 1.0)),
           )
         ],
       ),
