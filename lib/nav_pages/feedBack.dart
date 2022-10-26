@@ -234,8 +234,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                                         style: TextButton.styleFrom(
                                           foregroundColor: Colors.black,
                                         ),
-                                      ))) /**/
-                              ),
+                                      )))),
                           Container(
                               padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
                               margin: const EdgeInsets.symmetric(horizontal: 0),
