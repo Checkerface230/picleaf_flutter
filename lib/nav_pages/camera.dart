@@ -101,6 +101,16 @@ class _CameraPageState extends State<cameraPage> {
     detectImage(_image);
   }
 
+  String? value;
+  final items = [
+    "Bell Pepper",
+    "Cassava",
+    "Grape",
+    "Potato",
+    "Strawberry",
+    "Tomato",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -126,7 +136,7 @@ class _CameraPageState extends State<cameraPage> {
           Center(
             child: loading
                 ? SizedBox(
-                    height: 330,
+                    height: 310,
                     width: 250,
                     child: Column(children: <Widget>[
                       Image.asset('assets/images/logo.png')
@@ -206,9 +216,27 @@ class _CameraPageState extends State<cameraPage> {
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(10))),
             child: const Text(
-              'User Tip:\n Make sure that the picture is clear\n to maximize results.',
-              style: TextStyle(fontFamily: 'RobotoMedium', fontSize: 16),
+              'User Tip:\nMake sure that the picture is clear\nto maximize results. Use the menu \nbelow for more accurate detection.',
+              style: TextStyle(fontFamily: 'RobotoMedium', fontSize: 18),
               textAlign: TextAlign.center,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+            decoration: BoxDecoration(
+                border: Border.all(
+                    color: const Color.fromARGB(255, 75, 175, 78), width: 2),
+                borderRadius: BorderRadius.circular(12)),
+            child: DropdownButton<String>(
+              value: value,
+              underline: const SizedBox(),
+              icon: const Icon(
+                Icons.arrow_drop_down,
+                color: Color.fromARGB(255, 75, 175, 78),
+              ),
+              items: items.map(buildMenuItem).toList(),
+              onChanged: ((value) => setState(() => this.value = value)),
             ),
           ),
           const SizedBox(
@@ -310,4 +338,15 @@ class _CameraPageState extends State<cameraPage> {
       )),
     );
   }
+
+  DropdownMenuItem<String> buildMenuItem(String item) => DropdownMenuItem(
+        value: item,
+        child: Text(
+          item,
+          style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+              color: Color.fromARGB(255, 75, 175, 78)),
+        ),
+      );
 }
