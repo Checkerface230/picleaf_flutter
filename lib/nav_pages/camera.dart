@@ -51,6 +51,14 @@ class _CameraPageState extends State<cameraPage> {
   }
 
   detectImage(File image) async {
+    if (value == null) {
+      await Tflite.loadModel(
+          model: 'assets/model_unquant.tflite', labels: 'assets/labels.txt');
+    } else {
+      await Tflite.loadModel(
+          model: 'assets/Plants/$value/model_unquant.tflite',
+          labels: 'assets/Plants/$value/labels.txt');
+    }
     var output = await Tflite.runModelOnImage(
         path: image.path,
         numResults: 24,
@@ -68,8 +76,14 @@ class _CameraPageState extends State<cameraPage> {
   }
 
   loadModel() async {
-    await Tflite.loadModel(
-        model: 'assets/model_unquant.tflite', labels: 'assets/labels.txt');
+    if (value == null) {
+      await Tflite.loadModel(
+          model: 'assets/model_unquant.tflite', labels: 'assets/labels.txt');
+    } else {
+      await Tflite.loadModel(
+          model: 'assets/Plants/$value/model_unquant.tflite',
+          labels: 'assets/Plants/$value/labels.txt');
+    }
   }
 
   @override
@@ -143,7 +157,7 @@ class _CameraPageState extends State<cameraPage> {
                     ]),
                   )
                 : /*const Text(
-                      'Yung mga susunod sana dito yung ilalabas na output kapag na detect yung image') */
+                      'Yung mga susunod dito yung ilalabas na output kapag na detect yung image') */
                 SizedBox(
                     child: Column(children: <Widget>[
                       SizedBox(
