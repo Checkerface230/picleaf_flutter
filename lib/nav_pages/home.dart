@@ -9,7 +9,7 @@ class homePage extends StatefulWidget {
   State<homePage> createState() => _HomePageState();
 }
 
-List<String> plants = [
+const List<String> plants = [
   "Bell Pepper",
   "Cassava",
   "Grape",
@@ -67,6 +67,10 @@ class CustomSearchDelegate extends SearchDelegate {
             result,
             style: const TextStyle(fontFamily: 'RobotoMedium'),
           ),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => SecondPage(plantname: result)));
+          },
         );
       },
     );
@@ -91,6 +95,10 @@ class CustomSearchDelegate extends SearchDelegate {
             result,
             style: const TextStyle(fontFamily: 'RobotoMedium'),
           ),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => SecondPage(plantname: result)));
+          },
         );
       },
     );
@@ -98,6 +106,25 @@ class CustomSearchDelegate extends SearchDelegate {
 }
 
 class _HomePageState extends State<homePage> {
+  //Para ito sa shortcut for the List of Plants
+  List<Widget> getPlantList() {
+    List<Widget> plantitems = [];
+    for (int i = 0; i < plants.length; i++) {
+      String plant = plants[i];
+      var newItem = ListViewCard(
+        title: plant,
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => SecondPage(plantname: plant)));
+        },
+        imageOfPlant: "assets/Images_of_Plant/BellPeper_Image.jpg",
+      );
+      plantitems.add(newItem);
+    }
+    return plantitems;
+  }
+
+//
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -120,7 +147,8 @@ class _HomePageState extends State<homePage> {
                   // delegate to customize the search bar
                   delegate: CustomSearchDelegate());
             },
-            icon: const Icon(Icons.search, color: Colors.black),
+            icon: const Icon(Icons.search,
+                color: Color.fromRGBO(102, 204, 102, 1.0)),
           )
         ],
       ),
@@ -177,76 +205,14 @@ class _HomePageState extends State<homePage> {
                     ),
                   ),
                   GridView.count(
-                    physics: const ScrollPhysics(),
-                    shrinkWrap: true,
-                    padding: const EdgeInsets.all(8.0),
-                    crossAxisSpacing: 20,
-                    mainAxisSpacing: 20,
-                    childAspectRatio: 3 / 4.2,
-                    crossAxisCount: 2,
-                    children: <Widget>[
-                      ListViewCard(
-                        title: "Bell Pepper",
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) =>
-                                  const SecondPage(plantname: 'Bell Pepper')));
-                        },
-                        imageOfPlant:
-                            "assets/Images_of_Plant/BellPeper_Image.jpg",
-                      ),
-                      ListViewCard(
-                        title: "Cassava",
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) =>
-                                  const SecondPage(plantname: 'Cassava')));
-                        },
-                        imageOfPlant:
-                            "assets/Images_of_Plant/BellPeper_Image.jpg",
-                      ),
-                      ListViewCard(
-                        title: "Grape",
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) =>
-                                  const SecondPage(plantname: 'Grape')));
-                        },
-                        imageOfPlant:
-                            "assets/Images_of_Plant/BellPeper_Image.jpg",
-                      ),
-                      ListViewCard(
-                        title: "Potato",
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) =>
-                                  const SecondPage(plantname: 'Potato')));
-                        },
-                        imageOfPlant:
-                            "assets/Images_of_Plant/BellPeper_Image.jpg",
-                      ),
-                      ListViewCard(
-                        title: "Strawberry",
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) =>
-                                  const SecondPage(plantname: 'Strawberry')));
-                        },
-                        imageOfPlant:
-                            "assets/Images_of_Plant/BellPeper_Image.jpg",
-                      ),
-                      ListViewCard(
-                        title: "Tomato",
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) =>
-                                  const SecondPage(plantname: 'Tomato')));
-                        },
-                        imageOfPlant:
-                            "assets/Images_of_Plant/BellPeper_Image.jpg",
-                      ),
-                    ],
-                  ),
+                      physics: const ScrollPhysics(),
+                      shrinkWrap: true,
+                      padding: const EdgeInsets.all(8.0),
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
+                      childAspectRatio: 3 / 4.2,
+                      crossAxisCount: 2,
+                      children: getPlantList()),
                 ],
               ),
             ),
