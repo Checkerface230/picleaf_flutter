@@ -40,14 +40,13 @@ dependencies:
   cloud_firestore: ^3.4.9
   firebase_core: ^1.23.0
   firebase_auth: ^3.10.0
-  url_launcher: ^6.1.6
+  url_launcher: ^6.0.0
 
 
 flutter_native_splash:
   color: "#ffffff"
   image: assets/images/logo.png
   web: true
- 
 
 dev_dependencies:
   flutter_test:
@@ -92,11 +91,11 @@ flutter:
   - assets/images/logo.png
   - assets/model_unquant.tflite
   - assets/labels.txt
-  - assets/Images_of_Plant/0.jpg
-  - assets/Images_of_Plant/1.jpg
-  - assets/Images_of_Plant/2.jpg
-  - assets/Images_of_Plant/3.jpg
-  - assets/Images_of_Plant/4.jpg
+  - assets/Images_of_Plant/0.png
+  - assets/Images_of_Plant/1.png
+  - assets/Images_of_Plant/2.png
+  - assets/Images_of_Plant/3.png
+  - assets/Images_of_Plant/4.png
   - assets/Images_of_Plant/5.png  
   
 

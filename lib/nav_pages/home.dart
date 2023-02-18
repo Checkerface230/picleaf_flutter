@@ -118,7 +118,7 @@ class _HomePageState extends State<homePage> {
           Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => SecondPage(plantname: plant)));
         },
-        imageOfPlant: "assets/Images_of_Plant/$imgname.jpg",
+        imageOfPlant: "assets/Images_of_Plant/$imgname.png",
       );
       plantitems.add(newItem);
     }
