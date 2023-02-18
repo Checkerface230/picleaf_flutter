@@ -92,8 +92,12 @@ flutter:
   - assets/images/logo.png
   - assets/model_unquant.tflite
   - assets/labels.txt
-  - assets/Images_of_Plant/BellPeper_Image.jpg
-  - assets/Images_of_Plant/Tomato.png
+  - assets/Images_of_Plant/0.jpg
+  - assets/Images_of_Plant/1.jpg
+  - assets/Images_of_Plant/2.jpg
+  - assets/Images_of_Plant/3.jpg
+  - assets/Images_of_Plant/4.jpg
+  - assets/Images_of_Plant/5.png  
   
 
 
