@@ -51,6 +51,14 @@ class _CameraPageState extends State<cameraPage> {
   }
 
   detectImage(File image) async {
+    if (value == null) {
+      await Tflite.loadModel(
+          model: 'assets/model_unquant.tflite', labels: 'assets/labels.txt');
+    } else {
+      await Tflite.loadModel(
+          model: 'assets/Plants/$value/model_unquant.tflite',
+          labels: 'assets/Plants/$value/labels.txt');
+    }
     var output = await Tflite.runModelOnImage(
         path: image.path,
         numResults: 24,
@@ -68,8 +76,14 @@ class _CameraPageState extends State<cameraPage> {
   }
 
   loadModel() async {
-    await Tflite.loadModel(
-        model: 'assets/model_unquant.tflite', labels: 'assets/labels.txt');
+    if (value == null) {
+      await Tflite.loadModel(
+          model: 'assets/model_unquant.tflite', labels: 'assets/labels.txt');
+    } else {
+      await Tflite.loadModel(
+          model: 'assets/Plants/$value/model_unquant.tflite',
+          labels: 'assets/Plants/$value/labels.txt');
+    }
   }
 
   @override
@@ -143,7 +157,7 @@ class _CameraPageState extends State<cameraPage> {
                     ]),
                   )
                 : /*const Text(
-                      'Yung mga susunod sana dito yung ilalabas na output kapag na detect yung image') */
+                      'Yung mga susunod dito yung ilalabas na output kapag na detect yung image') */
                 SizedBox(
                     child: Column(children: <Widget>[
                       SizedBox(
@@ -216,27 +230,9 @@ class _CameraPageState extends State<cameraPage> {
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(10))),
             child: const Text(
-              'User Tip:\nMake sure that the picture is clear\nto maximize results. Use the menu \nbelow for more accurate detection.',
+              'User Tip:\nMake sure that the picture is clear\nto maximize results.',
               style: TextStyle(fontFamily: 'RobotoMedium', fontSize: 18),
               textAlign: TextAlign.center,
-            ),
-          ),
-          const SizedBox(height: 10),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-            decoration: BoxDecoration(
-                border: Border.all(
-                    color: const Color.fromARGB(255, 75, 175, 78), width: 2),
-                borderRadius: BorderRadius.circular(12)),
-            child: DropdownButton<String>(
-              value: value,
-              underline: const SizedBox(),
-              icon: const Icon(
-                Icons.arrow_drop_down,
-                color: Color.fromARGB(255, 75, 175, 78),
-              ),
-              items: items.map(buildMenuItem).toList(),
-              onChanged: ((value) => setState(() => this.value = value)),
             ),
           ),
           const SizedBox(
@@ -338,15 +334,4 @@ class _CameraPageState extends State<cameraPage> {
       )),
     );
   }
-
-  DropdownMenuItem<String> buildMenuItem(String item) => DropdownMenuItem(
-        value: item,
-        child: Text(
-          item,
-          style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-              color: Color.fromARGB(255, 75, 175, 78)),
-        ),
-      );
 }
