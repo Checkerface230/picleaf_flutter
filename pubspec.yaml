@@ -93,6 +93,9 @@ flutter:
   - assets/model_unquant.tflite
   - assets/labels.txt
   - assets/Images_of_Plant/BellPeper_Image.jpg
+  - assets/Images_of_Plant/Tomato.png
+  
+
 
 
   # To add assets to your application, add an assets section, like this:
