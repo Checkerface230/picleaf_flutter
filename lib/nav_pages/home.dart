@@ -111,13 +111,14 @@ class _HomePageState extends State<homePage> {
     List<Widget> plantitems = [];
     for (int i = 0; i < plants.length; i++) {
       String plant = plants[i];
+      String imgname = i.toString();
       var newItem = ListViewCard(
         title: plant,
         onTap: () {
           Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => SecondPage(plantname: plant)));
         },
-        imageOfPlant: "assets/Images_of_Plant/BellPeper_Image.jpg",
+        imageOfPlant: "assets/Images_of_Plant/$imgname.jpg",
       );
       plantitems.add(newItem);
     }
