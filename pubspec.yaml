@@ -1,5 +1,5 @@
 name: picleaf
-description: A plant disease detection app using machine learning.
+description: A plant disease detection app for plantitos and plantitas using machine learning.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -89,7 +89,7 @@ flutter:
   - assets/images/Fritz_pic.png
   - assets/images/Russel_pic.png
   - assets/images/logo.png
-  - assets/model_unquant.tflite
+  - assets/picleaf_model_fp16.tflite
   - assets/labels.txt
   - assets/Images_of_Plant/0.png
   - assets/Images_of_Plant/1.png
