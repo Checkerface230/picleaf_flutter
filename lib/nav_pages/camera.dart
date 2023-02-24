@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_is_empty
+// ignore_for_file: prefer_is_empty, camel_case_types
 import 'package:picleaf/widgets/plant.dart';
 import 'package:flutter/material.dart';
 // Imports para sa Machine Learning Side
@@ -51,20 +51,13 @@ class _CameraPageState extends State<cameraPage> {
   }
 
   detectImage(File image) async {
-    if (value == null) {
-      await Tflite.loadModel(
-          model: 'assets/model_unquant.tflite', labels: 'assets/labels.txt');
-    } else {
-      await Tflite.loadModel(
-          model: 'assets/Plants/$value/model_unquant.tflite',
-          labels: 'assets/Plants/$value/labels.txt');
-    }
     var output = await Tflite.runModelOnImage(
         path: image.path,
         numResults: 24,
-        threshold: 0.6,
-        imageMean: 127.5,
-        imageStd: 127.5);
+        threshold: 0.4,
+        asynch: true,
+        imageMean: 0,
+        imageStd: 1);
     setState(() {
       _output = output;
       if (_output != null && _output!.length > 0) {
@@ -76,14 +69,10 @@ class _CameraPageState extends State<cameraPage> {
   }
 
   loadModel() async {
-    if (value == null) {
-      await Tflite.loadModel(
-          model: 'assets/model_unquant.tflite', labels: 'assets/labels.txt');
-    } else {
-      await Tflite.loadModel(
-          model: 'assets/Plants/$value/model_unquant.tflite',
-          labels: 'assets/Plants/$value/labels.txt');
-    }
+    await Tflite.loadModel(
+        model: 'assets/picleaf_model_fp16.tflite',
+        labels: 'assets/labels.txt',
+        numThreads: 1);
   }
 
   @override
@@ -91,6 +80,7 @@ class _CameraPageState extends State<cameraPage> {
     // ignore: todo
     // TODO: implement dispose
     super.dispose();
+    Tflite.close();
   }
 
   pickImage() async {

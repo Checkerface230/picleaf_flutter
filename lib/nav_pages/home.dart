@@ -211,7 +211,7 @@ class _HomePageState extends State<homePage> {
                       padding: const EdgeInsets.all(8.0),
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20,
-                      childAspectRatio: 3 / 4.2,
+                      childAspectRatio: 2 / 3.2,
                       crossAxisCount: 2,
                       children: getPlantList()),
                 ],
