@@ -51,7 +51,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                 fontWeight: FontWeight.bold),
           ),
           backgroundColor: Colors.white,
-          shadowColor: const Color.fromARGB(255, 95, 94, 94),
+          shadowColor: const Color.fromRGBO(95, 94, 94, 1.0),
         ),
 
         //body of the application
@@ -157,7 +157,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                       MaterialButton(
                         height: 50.0,
                         minWidth: double.infinity,
-                        color: const Color.fromRGBO(102, 204, 102, 1.0),
+                        color: const Color.fromRGBO(102, 204, 153, 1.0),
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
                             showDialog(

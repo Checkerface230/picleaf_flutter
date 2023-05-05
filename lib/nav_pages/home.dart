@@ -137,8 +137,8 @@ class _HomePageState extends State<homePage> {
               color: Color.fromRGBO(102, 204, 102, 1.0),
               fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.white,
-        shadowColor: const Color.fromARGB(255, 95, 94, 94),
+        backgroundColor: const Color.fromRGBO(255, 255, 255, 1.0),
+        shadowColor: const Color.fromRGBO(95, 94, 94, 1.0),
         actions: [
           IconButton(
             onPressed: () {
@@ -211,7 +211,8 @@ class _HomePageState extends State<homePage> {
                       padding: const EdgeInsets.all(8.0),
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20,
-                      childAspectRatio: 2 / 3.2,
+                      childAspectRatio:
+                          MediaQuery.of(context).size.height / 950,
                       crossAxisCount: 2,
                       children: getPlantList()),
                 ],
