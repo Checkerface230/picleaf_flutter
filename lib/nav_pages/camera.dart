@@ -237,7 +237,7 @@ class _CameraPageState extends State<cameraPage> {
                     topLeft: Radius.circular(20),
                     bottomLeft: Radius.circular(0),
                     bottomRight: Radius.circular(0)),
-                color: Color.fromARGB(255, 75, 175, 78)),
+                color: Color.fromRGBO(75, 175, 78, 1.0)),
             child: Column(children: <Widget>[
               const SizedBox(
                 height: 10,
@@ -257,7 +257,7 @@ class _CameraPageState extends State<cameraPage> {
                           alignment: Alignment.center,
                           padding: const EdgeInsets.symmetric(),
                           decoration: const BoxDecoration(
-                              color: Color.fromARGB(255, 75, 175, 78),
+                              color: Color.fromRGBO(75, 175, 78, 1.0),
                               shape: BoxShape.circle),
                           child: const Icon(
                             Icons.camera_alt,
@@ -294,7 +294,7 @@ class _CameraPageState extends State<cameraPage> {
                           alignment: Alignment.center,
                           padding: const EdgeInsets.symmetric(),
                           decoration: const BoxDecoration(
-                              color: Color.fromARGB(255, 75, 175, 78),
+                              color: Color.fromRGBO(75, 175, 78, 1.0),
                               shape: BoxShape.circle),
                           child: const Icon(
                             Icons.add,

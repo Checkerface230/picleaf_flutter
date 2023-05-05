@@ -15,14 +15,15 @@ class ListViewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: const Color.fromRGBO(75, 175, 78, 1.0),
-      elevation: 1,
+      color: const Color.fromRGBO(100, 175, 78, 1.0),
+      elevation: 15,
       margin: const EdgeInsets.all(8),
       semanticContainer: true,
       clipBehavior: Clip.antiAliasWithSaveLayer,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
       ),
+
       child: InkWell(
         splashColor: Colors.lightGreenAccent.withAlpha(30),
         onTap: onTap,
