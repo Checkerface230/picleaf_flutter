@@ -157,7 +157,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                       MaterialButton(
                         height: 50.0,
                         minWidth: double.infinity,
-                        color: const Color.fromRGBO(102, 204, 153, 1.0),
+                        color: const Color.fromRGBO(75, 175, 78, 1.0),
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
                             showDialog(

@@ -34,7 +34,7 @@ class _mainPageState extends State<mainPage> {
         backgroundColor: Color.fromRGBO(255, 255, 255, 1.0),
         onTap: onTap,
         currentIndex: currentIndex,
-        selectedItemColor: const Color.fromRGBO(102, 204, 153, 1.0),
+        selectedItemColor: const Color.fromRGBO(75, 175, 78, 1.0),
         unselectedItemColor: const Color.fromRGBO(102, 124, 138, 1.0),
         showUnselectedLabels: true,
         items: const [
