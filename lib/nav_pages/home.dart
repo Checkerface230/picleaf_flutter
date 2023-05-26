@@ -137,8 +137,8 @@ class _HomePageState extends State<homePage> {
               color: Color.fromRGBO(102, 204, 102, 1.0),
               fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.white,
-        shadowColor: const Color.fromARGB(255, 95, 94, 94),
+        backgroundColor: const Color.fromRGBO(255, 255, 255, 1.0),
+        shadowColor: const Color.fromRGBO(95, 94, 94, 1.0),
         actions: [
           IconButton(
             onPressed: () {
@@ -185,7 +185,16 @@ class _HomePageState extends State<homePage> {
               height: 10,
             ),
             Container(
-              color: const Color.fromRGBO(102, 204, 102, 1.0),
+              height: 900,
+              decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                    Color.fromRGBO(157, 222, 157, 1),
+                    Color.fromRGBO(50, 155, 50, 1),
+                    Color.fromRGBO(22, 95, 22, 1)
+                  ])),
               child: Column(
                 children: <Widget>[
                   Container(
@@ -211,7 +220,8 @@ class _HomePageState extends State<homePage> {
                       padding: const EdgeInsets.all(8.0),
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20,
-                      childAspectRatio: 2 / 3.2,
+                      childAspectRatio:
+                          MediaQuery.of(context).size.height / 950,
                       crossAxisCount: 2,
                       children: getPlantList()),
                 ],
