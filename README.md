@@ -1,4 +1,4 @@
-# picleaf
+# Picleaf
 
 A software that uses image processing to detect the disease that the plant may have according to the abnormalities of its leaves. It mainly focuses on fruit-bearing plants that garden lovers or the plantitos and plantitas in the Philippines tend to plant most often.
 
